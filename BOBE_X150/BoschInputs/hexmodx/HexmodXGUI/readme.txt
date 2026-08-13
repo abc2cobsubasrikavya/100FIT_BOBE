@@ -1,1 +1,0 @@
-To run HexmodX GUI, double click on HexmodXGUI.jar file.

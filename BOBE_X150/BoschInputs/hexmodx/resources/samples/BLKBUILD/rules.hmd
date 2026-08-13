@@ -1,3 +1,0 @@
-read -in medc18.hex
-blkbuild -start 0x9000000
-write -out _out/output.hex -lyt 0x20
