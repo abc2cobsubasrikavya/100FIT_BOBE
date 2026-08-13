@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style>
+		#bosch_bar {width: 100%; height: 10px; background: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKB4ADASIAAhEBAxEB/8QAGwABAQEAAwEBAAAAAAAAAAAAAAECBAUGAwf/xAAtEAEAAQEECQIHAQAAAAAAAAAAAQIDBBExBQYhMjNBcYGxcsESEzRDUWKygv/EABoBAQACAwEAAAAAAAAAAAAAAAABAwIEBQb/xAAjEQEAAQMDAwUAAAAAAAAAAAAAAQIDEQQxMgZxwQUiUWGB/9oADAMBAAIRAxEAPwD8yAaL34AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARyCM4B2AzOYxb7QyAzbxE2NWP4xcax3+z73jhT2cey3+zVv7tnTco7uQINV2FEAUQBRAFEAWcm5z2vm+tW9L0fT3K5Pby8t1PPstx9z4Z5oso9S8ZUiS1LPNMKaknJJyWUlkoqSeaTmvOUlMKaklJWUllCipxb1xI6OPLkXnidnwnJCipmWeTUspVShAUphVUpgDJXCCiE5ZGkE5TFSASNUMrSQst7trRstKMM/ijyw3Y8az9UeUrZ2d9MbRZzGbkIKAjsNEb9t0j3cBz9E71r0j3ROzC5xl2QDBrgAOTo7be49Mu1dXo36j/M+ztBztVzAIGuC4CMpBYEBEOLeOLPZynFvHE7MqN2vqeD5gLnPAAAAdTbTjbWk/tPlla9+rrKPC3JzXMy3o2AGKRMVZAASO+1MtIo0vVRP3LKqmOsYT4iXtXgdV9mnLth+38y985mrjFz8eo9Hqzp8fEz4AGq6gAA81rXV8u53imNk12lNMf17S9K8trnwrP1x4lZb3a+p4PKALnMAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/2Q==")}
+		#bosch_logo {width: 155px; height: 50px; float: right; background: url("data:image/png;base64,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")}
+
+		body {font-family: Arial; font-size: 120%; background-color: Snow; color: Black; padding: 10px 20px 0px 20px; }
+		a, a:visited {color: MidnightBlue; }
+		dfn {font-style: normal; color: YellowGreen; }
+		em {font-style: normal; color: SaddleBrown; }
+
+		body {counter-reset: hl1Counter; }
+		.hl1 {counter-reset: hl2Counter; }
+		.hl2 {counter-reset: hl3Counter; }
+		.hl3 {counter-reset: hl4Counter; }
+		.hl2:before {counter-increment: hl2Counter; content: counter(hl2Counter) ". "; }
+		.hl3:before {counter-increment: hl3Counter; content: counter(hl2Counter) "." counter(hl3Counter) ". "; }
+
+		.hl1 {padding: 35px 0px 35px 0px; font-size: 4vw; }
+		.hl2 {padding: 50px 0px  0px 0px; font-size: 160%; font-weight: bold; }
+		.hl3 {padding: 50px 0px  0px 0px; font-size: 130%; font-weight: bold; }
+
+		.nttable tr:hover {background-color: Azure; }
+		.ntcopyright {font-size: 80%; text-align: right; }
+		.ntlegend {font-size: 70%; column-span: all; }
+		.ntfaq {margin-left: 40px; }
+		.ntcode {font-family: Courier New; margin-left: 40px; }
+
+		.ntkw { color: Blue; font-weight: bold; }
+		.ntfn { color: DeepSkyBlue; }
+		.ntstr { color: Red; }
+	</style>
+	<link rel="icon" href="favicon.ico" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>BOBE</title>
+</head>
+<body>
+<div id="bosch_bar"></div>
+<div id="bosch_logo"></div>
+
+
+<p class="hl1"><b style="color: FireBrick">B</b>osch <b style="color: Red">O</b>EM <b style="color: SteelBlue">B</b>uild <b style="color: SkyBlue">E</b>nvironment</p>
+
+<p>With this package you get all needed files and information to create a steering library.</p>
+
+<p class="hl2">Index</p>
+<p>In this document you find the following information:</p>
+<ul>
+	<li><a href="#content">Package content</a></li>
+	<li><a href="#usagegui">Usage of BOBE GUI</a></li>
+	<li><a href="#usageman">Manual Usage of BOBE</a></li>
+	<li><a href="#settings">Settings</a></li>
+	<li><a href="#creation">Available processes</a></li>
+	<li>&emsp;<a href="#standardlib">Standard library (no debug)</a></li>
+	<li>&emsp;<a href="#standardexec_file">Standard executeable files (no debug)</a></li>
+
+	<li>&emsp;<a href="#stackmeasurement">Stack measurement</a></li>
+	<li>&emsp;<a href="#simulationlib">Simulation library</a></li>
+
+	<li><a href="#environment">Target Environment</a></li>
+	<li><a href="#spec">Specifications</a></li>
+	<li><a href="#faq">Pitfalls and FAQ</a></li>
+</ul>
+
+
+<p class="hl2" id="content">Package content</p>
+<table class="nttable">
+	<tr><th>Path and Filename</th><th>Used by</th><th>Description</th></tr>
+	<tr><td>BOBE.exe</td><td>LI</td><td>The GUI application which is explained in <a href="#usagegui">Usage of BOBE GUI</a>.</td></tr>
+	<tr><td>create_exec.bat</td><td>ES</td><td>Used by the GUI to create executables, can also be directly called for <a href="#usageman">Manual Usage of BOBE</a>.</td></tr>
+	<tr><td>create_lib.bat</td><td>LI</td><td>Used by the GUI to create libraries, can also be directly called for <a href="#usageman">Manual Usage of BOBE</a>.</td></tr>
+	<tr><td>settings.bat</td><td>LI</td><td>All application settings that can be modified by the user.</td></tr>
+	<tr><td><a href="../BoschInputs" target="_blank">BoschInputs/</a></td><td>L</td><td></td></tr>
+	<tr><td>&emsp;a2l_merge.ini</td><td></td><td>Config file needed for A2L.</td></tr>
+	<tr><td>&emsp;a2l_updater.ini</td><td>E</td><td>Config file needed for A2L.</td></tr>
+	<tr><td>&emsp;cyg*.dll</td><td>ES</td><td>Cygwin libraries needed for sed.exe.</td></tr>
+	<tr><td>&emsp;linkseglayer.ld</td><td>ES</td><td>Link segment layer file.</td></tr>
+	<tr><td>&emsp;merge.py</td><td>E</td><td>A2L merge helper python script.</td></tr>
+	<tr><td>&emsp;odx_config.ocnf</td><td>E</td><td>Config file for ODX creation.</td></tr>
+	<tr><td>&emsp;pedscript.ped</td><td>E</td><td>Rule set for ped.</td></tr>
+	<tr><td>&emsp;searchandreplace.exe</td><td>E</td><td>Simple search&amp;replace command.</td></tr>
+	<tr><td>&emsp;sed.exe</td><td>ES</td><td>Complex search&amp;replace command from the Unix world.</td></tr>
+	<tr><td>&emsp;updater.sed</td><td>ES</td><td>The search&amp;replace rule set.</td></tr>
+	<tr><td>&emsp;<a href="../BoschInputs/Data" target="_blank">Data/</a></td><td>E</td><td></td></tr>
+	<tr><td>&emsp;&emsp;3G1300D7000T02_RG1_X_VARI04_with_backup_patched.hex</td><td>E</td><td>Reference hex file.</td></tr>
+	<tr><td>&emsp;ped/</td><td>E</td><td>PED++ application.</td></tr>
+	<tr><td>&emsp;<a href="../BoschInputs/Includes" target="_blank">Includes/</a></td><td>LI</td><td>Include files from Bosch.</td></tr>
+	<tr><td>&emsp;&emsp;Compiler.h</td><td>LESIX</td><td>c:\eps_deploy\BitBucketBuild\include\Compiler.h.</td></tr>
+	<tr><td>&emsp;&emsp;Compiler_Cfg.h</td><td>LESIX</td><td>c:\eps_deploy\BitBucketBuild\include\Compiler_Cfg.h.</td></tr>
+	<tr><td>&emsp;&emsp;Os.h</td><td>LESIX</td><td>c:\eps_deploy\BitBucketBuild\include\Os.h.</td></tr>
+	<tr><td>&emsp;&emsp;Os_Cfg.h</td><td>LESIX</td><td>c:\eps_deploy\BitBucketBuild\include\Os_Cfg.h.</td></tr>
+	<tr><td>&emsp;&emsp;Os_Compiler_Cfg.h</td><td>LESIX</td><td>c:\eps_deploy\BitBucketBuild\include\Os_Compiler_Cfg.h.</td></tr>
+	<tr><td>&emsp;&emsp;Os_Metrics.h</td><td>LESIX</td><td>c:\eps_deploy\BitBucketBuild\include\Os_Metrics.h.</td></tr>
+	<tr><td>&emsp;&emsp;Os_Safe_Cfg.h</td><td>LESIX</td><td>c:\eps_deploy\BitBucketBuild\include\Os_Safe_Cfg.h.</td></tr>
+	<tr><td>&emsp;&emsp;Platform_Types.h</td><td>LESIX</td><td>c:\eps_deploy\BitBucketBuild\include\Platform_Types.h.</td></tr>
+	<tr><td>&emsp;&emsp;Rte.h</td><td>LESIX</td><td>c:\eps_deploy\BitBucketBuild\include\Rte.h.</td></tr>
+	<tr><td>&emsp;&emsp;Rte_ASC_SWC.h</td><td>LESIX</td><td>c:\eps_deploy\BitBucketBuild\include\Rte_ASC_SWC.h.</td></tr>
+	<tr><td>&emsp;&emsp;Rte_ASC_SWC_Type.h</td><td>LESIX</td><td>c:\eps_deploy\BitBucketBuild\include\Rte_ASC_SWC_Type.h.</td></tr>
+	<tr><td>&emsp;&emsp;Rte_Cfg.h</td><td>LESIX</td><td>c:\eps_deploy\BitBucketBuild\include\Rte_Cfg.h.</td></tr>
+	<tr><td>&emsp;&emsp;Rte_Const.h</td><td>LESIX</td><td>c:\eps_deploy\BitBucketBuild\include\Rte_Const.h.</td></tr>
+	<tr><td>&emsp;&emsp;Rte_DataHandleType.h</td><td>LESIX</td><td>c:\eps_deploy\BitBucketBuild\include\Rte_DataHandleType.h.</td></tr>
+	<tr><td>&emsp;&emsp;Rte_Intl.h</td><td>LESIX</td><td>c:\eps_deploy\BitBucketBuild\include\Rte_Intl.h.</td></tr>
+	<tr><td>&emsp;&emsp;Rte_MemMap.h</td><td>LESIX</td><td>c:\eps_deploy\BitBucketBuild\include\Rte_MemMap.h.</td></tr>
+	<tr><td>&emsp;&emsp;Rte_SAC_SWC.h</td><td>LESIX</td><td>c:\eps_deploy\BitBucketBuild\include\Rte_SAC_SWC.h.</td></tr>
+	<tr><td>&emsp;&emsp;Rte_SAC_SWC_Type.h</td><td>LESIX</td><td>c:\eps_deploy\BitBucketBuild\include\Rte_SAC_SWC_Type.h.</td></tr>
+	<tr><td>&emsp;&emsp;Rte_Type.h</td><td>LESIX</td><td>c:\eps_deploy\BitBucketBuild\include\Rte_Type.h.</td></tr>
+	<tr><td>&emsp;&emsp;Std_Types.h</td><td>LESIX</td><td>c:\eps_deploy\BitBucketBuild\include\Std_Types.h.</td></tr>
+	<tr><td>&emsp;<a href="../c:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\Libraries" target="_blank">Libraries/</a></td><td>ES</td><td>Various libraries.</td></tr>
+	<tr><td>&emsp;&emsp;Mainpath_VARI04_Dev_Lib.a</td><td>ES</td><td>Dynamic library (specific for this release).</td></tr>
+	<tr><td>&emsp;&emsp;Mainpath_VARI04_Lib.a</td><td>ES</td><td>Dynamic library (specific for this release).</td></tr>
+	<tr><td>&emsp;&emsp;HWLIB_rel_HW46_FOC13_Faint_off_Lib.a</td><td>ES</td><td>Static library (under version control).</td></tr>
+	<tr><td>&emsp;&emsp;MQB37W_ASC_SAC.a</td><td>ES</td><td>Static library (under version control).</td></tr>
+	<tr><td>&emsp;&emsp;DSFxp.lib</td><td>ES</td><td>Static library (under version control).</td></tr>
+	<tr><td>&emsp;&emsp;RTAOS.a</td><td>ES</td><td>Static library (under version control).</td></tr>
+	<tr><td><a href="../BuildOutput" target="_blank">BuildOutput/</a></td><td>L</td><td>All build results will appear here.</td></tr>
+	<tr><td>&emsp;<a href="../BuildOutput/standard" target="_blank">standard/</a></td><td>L</td><td>Build results for Standard library (no debug).</td></tr>
+	<tr><td>&emsp;<a href="../BuildOutput/standard_executable_file" target="_blank">standard_executable_file/</a></td><td>E</td><td>Build results for Standard executeable files (no debug).</td></tr>
+
+	<tr><td>&emsp;<a href="../BuildOutput/stack" target="_blank">stack/</a></td><td>S</td><td>Build results for Stack measurement.</td></tr>
+	<tr><td>&emsp;<a href="../BuildOutput/sillib" target="_blank">sillib/</a></td><td>I</td><td>Build results for Simulation library.</td></tr>
+
+	<tr><td><a href="../Documentation" target="_blank">Documentation/</a></td><td></td><td>Contains this documentation.</td></tr>
+	<tr><td>&emsp;documentation.html</td><td></td><td>This documentation.</td></tr>
+	<tr><td>&emsp;favicon.ico</td><td></td><td>Icon for the documentation.html file.</td></tr>
+	<tr><td>&emsp;img*.png</td><td></td><td>Images for the documentation.html file.</td></tr>
+	<tr><td class="ntlegend">&nbsp;</td></tr>
+	<tr><td></td><td class="ntlegend">L == <a href="#standardlib">Standard library (no debug)</a></td></tr>
+	<tr><td></td><td class="ntlegend">E == <a href="#standardexec_file">Standard executeable files (no debug)</a></td></tr>
+	<tr><td></td><td class="ntlegend">S == <a href="#stackmeasurement">Stack measurement</a></td></tr>
+
+
+</table>
+
+
+<p class="hl2" id="usagegui">Usage of BOBE GUI</p>
+<p>To create the library and executable files, please do the following:</p>
+<ol>
+	<li>Extract the zipped folder to a directory of your choice.</li>
+	<li>Start the user GUI by double clicking on <em>BOBE.exe</em>.</li>
+	<li>If you already configured BOBE, you can skip to step 9.</li>
+	<li>Change to tab <em>Settings &amp; Help</em>:<br/><img src="img_bobe_settings.png" alt=""/></li>
+	<li>Click on <em>Open Settings in setting.bat</em>.</li>
+	<li>Notepad will open the file <em>setting.bat</em>.</li>
+	<li>Change all required settings as described in the <a href="#settings">Settings section</a>.</li>
+	<li>Change back to tab <em>Creation</em>.</li>
+	<li>Choose the required process as described in the <a href="#creation">Available Process section</a>:<br/><img src="img_bobe_main.png" alt=""/></li>
+	<li>Click on <em>Create</em>.</li>
+	<li>A DOS window will open and executd the desired steps.</li>
+	<li>Once the build has been finished, confirm by pressing any key.</li>
+	<li>You find the generated files in a subfolder of <a href="../BuildOutput" target="_blank">BuildOutput</a>. The corresponding output folder will be opened automatically.</li>
+</ol>
+<p>You find all warnings and errors in the <em><a href="../BuildOutput" target="_blank">BuildOutput</a>/&lt;selected process&gt;/Logs</em> folder.<br/>
+
+
+<p class="hl2" id="usageman">Manual Usage of BOBE</p>
+<p>To create the library and executable files manually or from within user defined scripts, please do the following:</p>
+<ol>
+	<li>Extract the zipped folder to a directory of your choice.</li>
+	<li>If you already configured BOBE, you can skip to step 5.</li>
+	<li>Open the file <em>setting.bat</em> in your favorite text editor.</li>
+	<li>Change all required settings as described in the <a href="#settings">Settings section</a>.</li>
+	<li>Open a command prompt or edit your user script.</li>
+	<li>Based on the required process as described in the <a href="#creation">Available Process section</a> you can now use <em>create_lib.bat &lt;selected process&gt;</em>.</li>
+	<li>You find the generated files in a subfolder of <a href="../BuildOutput" target="_blank">BuildOutput</a>.</li>
+	<li>You can see that the process was successful if a file named <em>CreateLib.log</em> exists in the <em><a href="../BuildOutput" target="_blank">BuildOutput</a>/&lt;selected process&gt;/Logs</em> folder.</li>
+	<li>Depending on the process you may now have to use <em>create_exec.bat &lt;selected process&gt;</em>.</li>
+	<li>You can see that this process also was successful if a file named <em>CreateExec.log</em> exists in the <em><a href="../BuildOutput" target="_blank">BuildOutput</a>/&lt;selected process&gt;/Logs</em> folder.</li>
+</ol>
+<p>Example for a manual build of the <a href="#standardexec_file">Standard executeable files </a> process:</p>
+<pre class="ntcode">
+<span class="ntkw">del</span> /q BuildOutput\standard_executable_file\Logs\CreateLib.log
+<span class="ntkw">call</span> <span class="ntfn">create_lib.bat</span> standard_executable_file
+<span class="ntkw">if not exist</span> BuildOutput\standard_executable_file\Logs\CreateLib.log (
+	<span class="ntkw">echo</span><span class="ntstr"> Library building failed</span>
+	<span class="ntkw">exit</span> /b 1
+)
+<span class="ntkw">del</span> /q BuildOutput\standard_executable_file\Logs\CreateExec.log
+<span class="ntkw">call</span> <span class="ntfn">create_exec.bat</span> standard_executable_file
+<span class="ntkw">if not exist</span> BuildOutput\standard_executable_file\Logs\CreateExec.log (
+	<span class="ntkw">echo</span> <span class="ntstr">Execution building failed</span>
+	<span class="ntkw">exit</span> /b 1
+)</pre>
+
+<p class="hl2" id="settings">Settings</p>
+<p>This settings can be changed in <em>settings.bat</em> (please only change the values before the <em>) else (</em> line, everything below will be ignored):</p>
+<img src="img_settings.png" alt=""/>
+<p>This list contains all settings that can be changed by the user:</p>
+<table class="nttable">
+	<tr><th>Name of the setting</th><th>Used by</th><th>Description</th></tr>
+	<tr><td><dfn>WORKPATH</dfn></td><td>LI</td><td>Path to your project with */SRC/*.c and */INC/*.h files (other files and other paths will be ignored).</td></tr>
+	<tr><td><dfn>NAMELIB</dfn></td><td>LI</td><td>Target name of the library file that will be generated (without path or file extension).</td></tr>
+	<tr><td><dfn>CUSTINCPATH</dfn></td><td>LI</td><td>Path to a folder for additional includes, please copy all includes to this folder.</td></tr>
+	<tr><td><dfn>GHSPATH</dfn></td><td>L</td><td>Path to Greenhills RH850 compiler (a folder containing ccrh850.exe).</td></tr>
+	<tr><td><dfn>SWVERCUST</dfn></td><td>E</td><td>Software version number that will be used for ODX Create (shall have a length of 4 characters).</td></tr>
+	<tr><td><dfn>PYTHONCMD</dfn></td><td>E</td><td>Path to a python interpreter version 2.7.x (including the name of the executable).</td></tr>
+	<tr><td><dfn>A2LUPDATERCMD</dfn></td><td>E</td><td>Path to an A2L updater command (including the name of the executable).</td></tr>
+	<tr><td><dfn>A2LMERGEUPDATEPATH</dfn></td><td>E</td><td>Path to an A2L updater folder with *.a2l files (other files will be ignored) for merge and update.</td></tr>
+	<tr><td><dfn>ODXCREATEPATH</dfn></td><td>E</td><td>Path to an ODXCreate command (a folder containing ODXCreate.exe).</td></tr>
+	<tr><td><dfn>FDSSIGKEYFILE</dfn></td><td>E</td><td>Full path to a signature key file (Flashdatensicherheit) that will be used for ODX Create.</td></tr>
+	<tr><td><dfn>FDSPRJCFGFILE</dfn></td><td>E</td><td>Full path to a project config file (Flashdatensicherheit) that will be used for ODX Create.</td></tr>
+	<tr><td><dfn>FCT_STACK_SIZE</dfn></td><td>S</td><td>Root functions for stack size measurement.</td></tr>
+	<tr><td><dfn>MSVCPATH</dfn></td><td>I</td><td>Path to MSVC Compiler (a folder containing bin/cl.exe or bin/amd64/cl.exe depending on <dfn>MSVCBITOPT</dfn>).</td></tr>
+	<tr><td><dfn>MSVCBITOPT</dfn></td><td>I</td><td>Architecture to use for MSVC Compiler: Either <em>32</em> for x86 or <em>64</em> for amd64.</td></tr>
+	<tr><td><dfn>QNX_HOST</dfn></td><td>X</td><td>Path to Scalexio QNX Compiler's host related components (a folder containing usr/bin/ntox86-gcc.exe). See <a href="http://www.qnx.de/developers/docs/6.5.0/index.jsp?topic=%2Fcom.qnx.doc.momentics_welcome%2Fstart.html" target="_blank">Getting Started</a> for details.</td></tr>
+	<tr><td><dfn>QNX_TARGET</dfn></td><td>X</td><td>Path to Scalexio QNX Compiler's target related components (a folder containing platform/ sub folder). See <a href="http://www.qnx.de/developers/docs/6.5.0/index.jsp?topic=%2Fcom.qnx.doc.momentics_welcome%2Fstart.html" target="_blank">Getting Started</a> for details.</td></tr>
+	<tr><td class="ntlegend">&nbsp;</td></tr>
+	<tr><td></td><td class="ntlegend">L == <a href="#standardlib">Standard library (no debug)</a></td></tr>
+	<tr><td></td><td class="ntlegend">E == <a href="#standardexec_file">Standard executeable files (no debug)</a></td></tr>
+	<tr><td></td><td class="ntlegend">S == <a href="#stackmeasurement">Stack measurement</a></td></tr>
+	<tr><td></td><td class="ntlegend">I == <a href="#simulationlib">Simulation library</a></td></tr>
+
+</table>
+
+
+<p class="hl2" id="creation">Available Processes</p>
+<p>The following processes can be selected either within the GUI BOBE.exe or manually by invoking the .bat files with the target name:</p>
+
+<p class="hl3" id="standardlib">Standard library (no debug)</p>
+<p>This creates the standard library without debug information.</p>
+<p>This step uses all <a href="#settings">settings</a> and all <a href="#content">inputs</a> marked with an L.</p>
+<p>To manually execute this step, call <em>create_lib.bat standard</em> from a DOS prompt.</p>
+<p>The software listed in <a href="#environment">Target Environment</a> marked with an L needs to be installed on the target machine.</p>
+<p>The following files will be created in the <a href="../BuildOutput" target="_blank">BuildOutput</a> directory:</p>
+<table class="nttable">
+	<tr><th>Path and Filename</th><th>Description</th></tr>
+	<tr><td><a href="../BuildOutput/standard" target="_blank">standard/</a></td><td>All files created during build process will be collected here.</td></tr>
+	<tr><td>&emsp;<a href="../BuildOutput/standard/HFiles" target="_blank">HFiles/</a></td><td>All custom header files that are used during build process will be collected here.</td></tr>
+	<tr><td>&emsp;<a href="../BuildOutput/standard/Logs" target="_blank">Logs/</a></td><td>All log files that are created during build process will be collected here.</td></tr>
+	<tr><td>&emsp;&emsp;<a href="../BuildOutput/standard/Logs/CreateLib.log" target="_blank">CreateLib.log</a></td><td>This log file contains all steps executed during library creation if the process was successful.</td></tr>
+	<tr><td>&emsp;&emsp;<a href="../BuildOutput/standard/Logs/Error.log" target="_blank">Error.log</a></td><td>This log file contains all steps executed up to the point of error if the process was not successful.</td></tr>
+	<tr><td>&emsp;&emsp;<dfn>NAMELIB</dfn>_compile.log</td><td>This log file contains all output of compiler and linker.</td></tr>
+	<tr><td>&emsp;<a href="../BuildOutput/standard/Objects" target="_blank">Objects/</a></td><td>All temporary object files that are used during build process will be collected here.</td></tr>
+	<tr><td>&emsp;&emsp;*.o</td><td>This files contain the compiled binary code of a C file.</td></tr>
+	<tr><td>&emsp;&emsp;*.d</td><td>This files contain a list of included header files for the corresponding C file (in Make target format).</td></tr>
+	<tr><td>&emsp;MODULES_<dfn>NAMELIB</dfn>_RamRom.log</td><td>Lists the RAM and ROM size of all object files.</td></tr>
+	<tr><td>&emsp;SWC_<dfn>NAMELIB</dfn>_RamRom.log</td><td>Lists the RAM and ROM size of the library.</td></tr>
+	<tr><td>&emsp;<dfn>NAMELIB</dfn>.a</td><td>The created library. It can be used at Bosch to integrate your OEM software into Bosch EPS.</td></tr>
+</table>
+
+<p class="hl3" id="standardexec_file">Standard executeable files (no debug)</p>
+<p>This creates the standard executeable files without debug information.</p>
+<p>This step uses all <a href="#settings">settings</a> and all <a href="#content">inputs</a> marked with an E.</p>
+<p>To manually execute this step for PAS, call <em>create_lib.bat standard_executable_file</em>, followed by <em>create_exec.bat standard_executable_file</em> from a DOS prompt.</p>
+<p>The software listed in <a href="#environment">Target Environment</a> marked with an E needs to be installed on the target machine.</p>
+<table class="nttable">
+	<tr><th>Path and Filename</th><th>Description</th></tr>
+	<tr><td><a href="../BuildOutput/standard_executable_file" target="_blank">standard_executable_file/</a></td><td>All files created during build process will be collected here.</td></tr>
+	<tr><td>&emsp;<a href="../BuildOutput/standard_executable_file/HFiles" target="_blank">HFiles/</a></td><td>All custom header files that are used during build process will be collected here.</td></tr>
+	<tr><td>&emsp;<a href="../BuildOutput/standard_executable_file/Logs" target="_blank">Logs/</a></td><td>All log files that are created during build process will be collected here.</td></tr>
+	<tr><td>&emsp;&emsp;<a href="../BuildOutput/standard_executable_file/Logs/CreateLib.log" target="_blank">CreateLib.log</a></td><td>This log file contains all steps executed during library creation if the process was successful.</td></tr>
+	<tr><td>&emsp;&emsp;<a href="../BuildOutput/standard_executable_file/Logs/CreateExec.log" target="_blank">CreateExec.log</a></td><td>This log file contains all steps executed during executable creation if the process was successful.</td></tr>
+	<tr><td>&emsp;&emsp;<a href="../BuildOutput/standard_executable_file/Logs/Error.log" target="_blank">Error.log</a></td><td>This log file contains all steps executed up to the point of error if the process was not successful.</td></tr>
+	<tr><td>&emsp;&emsp;<dfn>NAMELIB</dfn>_a2l_update.log</td><td>This log file contains all output of the A2L updater command.</td></tr>
+	<tr><td>&emsp;&emsp;<dfn>NAMELIB</dfn>_compile.log</td><td>This log file contains all output of compiler and linker.</td></tr>
+	<tr><td>&emsp;&emsp;<dfn>NAMELIB</dfn>_elf.log</td><td>This log file contains all output of ELF compilation.</td></tr>
+	<tr><td>&emsp;&emsp;<dfn>NAMELIB</dfn>_hex.log</td><td>This log file contains all output of HEX file creation.</td></tr>
+	<tr><td>&emsp;&emsp;<dfn>NAMELIB</dfn>_PED.log</td><td>This log file contains all output of pedkdo during PED creation.</td></tr>
+	<tr><td>&emsp;<a href="../BuildOutput/standard_executable_file/Objects" target="_blank">Objects/</a></td><td>All temporary object files that are used during build process will be collected here.</td></tr>
+	<tr><td>&emsp;&emsp;*.o</td><td>This files contain the compiled binary code of a C file.</td></tr>
+	<tr><td>&emsp;&emsp;*.d</td><td>This files contain a list of included header files for the corresponding C file (in Make target format).</td></tr>
+	<tr><td>&emsp;3G1300D7000T02_RG1_X_VARI04__<dfn>NAMELIB</dfn>.elf</td><td>The compiled ELF file.</td></tr>
+	<tr><td>&emsp;3G1300D7000T02_RG1_X_VARI04__<dfn>NAMELIB</dfn>.map</td><td>Contains the addresses of all sections and global symbols.</td></tr>
+	<tr><td>&emsp;3G1300D7000T02_RG1_X_VARI04__<dfn>NAMELIB</dfn>_update.map</td><td>The MAP file for the A2L updater (ASAP2Updater.exe).</td></tr>
+	<tr><td>&emsp;3G1300D7000T02_RG1_X_VARI04__<dfn>NAMELIB</dfn>_StartAtDrive.hex</td><td>Final hex file as generated by the PAD script.</td></tr>
+	<tr><td>&emsp;FL__<dfn>SWVERCUST</dfn>_<dfn>NAMELIB</dfn>.odx</td><td>This odx file can be used for flashing via ODIS.</td></tr>
+	<tr><td>&emsp;MODULES_<dfn>NAMELIB</dfn>_RamRom.log</td><td>Lists the RAM and ROM size of all object files.</td></tr>
+	<tr><td>&emsp;SWC_<dfn>NAMELIB</dfn>_RamRom.log</td><td>Lists the RAM and ROM size of the library.</td></tr>
+	<tr><td>&emsp;<dfn>NAMELIB</dfn>.a</td><td>The created library.</td></tr>
+</table>
+
+<p class="hl3" id="standardexec_sent">Standard executeable files (SENT) (no debug)</p>
+<p>This creates the standard executeable files without debug information.</p>
+<p>This step uses all <a href="#settings">settings</a> and all <a href="#content">inputs</a> marked with an E.</p>
+<p>To manually execute this step for SENT, call <em>create_lib.bat standard_SENT</em>, followed by <em>create_exec.bat standard_SENT</em> from a DOS prompt.</p>
+<p>The software listed in <a href="#environment">Target Environment</a> marked with an E needs to be installed on the target machine.</p>
+<table class="nttable">
+	<tr><th>Path and Filename</th><th>Description</th></tr>
+	<tr><td><a href="../BuildOutput/standard_SENT" target="_blank">standard_SENT/</a></td><td>All files created during build process will be collected here.</td></tr>
+	<tr><td>&emsp;<a href="../BuildOutput/standard_SENT/HFiles" target="_blank">HFiles/</a></td><td>All custom header files that are used during build process will be collected here.</td></tr>
+	<tr><td>&emsp;<a href="../BuildOutput/standard_SENT/Logs" target="_blank">Logs/</a></td><td>All log files that are created during build process will be collected here.</td></tr>
+	<tr><td>&emsp;&emsp;<a href="../BuildOutput/standard_SENT/Logs/CreateLib.log" target="_blank">CreateLib.log</a></td><td>This log file contains all steps executed during library creation if the process was successful.</td></tr>
+	<tr><td>&emsp;&emsp;<a href="../BuildOutput/standard_SENT/Logs/CreateExec.log" target="_blank">CreateExec.log</a></td><td>This log file contains all steps executed during executable creation if the process was successful.</td></tr>
+	<tr><td>&emsp;&emsp;<a href="../BuildOutput/standard_SENT/Logs/Error.log" target="_blank">Error.log</a></td><td>This log file contains all steps executed up to the point of error if the process was not successful.</td></tr>
+	<tr><td>&emsp;&emsp;<dfn>NAMELIB</dfn>_a2l_update.log</td><td>This log file contains all output of the A2L updater command.</td></tr>
+	<tr><td>&emsp;&emsp;<dfn>NAMELIB</dfn>_compile.log</td><td>This log file contains all output of compiler and linker.</td></tr>
+	<tr><td>&emsp;&emsp;<dfn>NAMELIB</dfn>_elf.log</td><td>This log file contains all output of ELF compilation.</td></tr>
+	<tr><td>&emsp;&emsp;<dfn>NAMELIB</dfn>_hex.log</td><td>This log file contains all output of HEX file creation.</td></tr>
+	<tr><td>&emsp;&emsp;<dfn>NAMELIB</dfn>_PED.log</td><td>This log file contains all output of pedkdo during PED creation.</td></tr>
+	<tr><td>&emsp;<a href="../BuildOutput/standard_SENT/Objects" target="_blank">Objects/</a></td><td>All temporary object files that are used during build process will be collected here.</td></tr>
+	<tr><td>&emsp;&emsp;*.o</td><td>This files contain the compiled binary code of a C file.</td></tr>
+	<tr><td>&emsp;&emsp;*.d</td><td>This files contain a list of included header files for the corresponding C file (in Make target format).</td></tr>
+	<tr><td>&emsp;3G1300D7000T02_RG1_X_VARI04__<dfn>NAMELIB</dfn>.elf</td><td>The compiled ELF file.</td></tr>
+	<tr><td>&emsp;3G1300D7000T02_RG1_X_VARI04__<dfn>NAMELIB</dfn>.map</td><td>Contains the addresses of all sections and global symbols.</td></tr>
+	<tr><td>&emsp;3G1300D7000T02_RG1_X_VARI04__<dfn>NAMELIB</dfn>_update.map</td><td>The MAP file for the A2L updater (ASAP2Updater.exe).</td></tr>
+	<tr><td>&emsp;3G1300D7000T02_RG1_X_VARI04__<dfn>NAMELIB</dfn>_StartAtDrive.hex</td><td>Final hex file as generated by the PAD script.</td></tr>
+	<tr><td>&emsp;FL__<dfn>SWVERCUST</dfn>_<dfn>NAMELIB</dfn>.odx</td><td>This odx file can be used for flashing via ODIS.</td></tr>
+	<tr><td>&emsp;MODULES_<dfn>NAMELIB</dfn>_RamRom.log</td><td>Lists the RAM and ROM size of all object files.</td></tr>
+	<tr><td>&emsp;SWC_<dfn>NAMELIB</dfn>_RamRom.log</td><td>Lists the RAM and ROM size of the library.</td></tr>
+	<tr><td>&emsp;<dfn>NAMELIB</dfn>.a</td><td>The created library.</td></tr>
+</table>
+
+<p class="hl3" id="stackmeasurement">Stack measurement</p>
+<p>This creates stack measurement data.</p>
+<p>This step uses all <a href="#settings">settings</a> and all <a href="#content">inputs</a> marked with an S.</p>
+<p>To manually execute this step, call <em>create_lib.bat stack</em>, followed by <em>create_exec.bat stack</em> from a DOS prompt.</p>
+<p>The software listed in <a href="#environment">Target Environment</a> marked with an S needs to be installed on the target machine.</p>
+<table class="nttable">
+	<tr><th>Path and Filename</th><th>Description</th></tr>
+	<tr><td><a href="../BuildOutput/stack" target="_blank">stack/</a></td><td>All files created during build process will be collected here.</td></tr>
+	<tr><td>&emsp;<a href="../BuildOutput/stack/HFiles" target="_blank">HFiles/</a></td><td>All custom header files that are used during build process will be collected here.</td></tr>
+	<tr><td>&emsp;<a href="../BuildOutput/stack/Logs" target="_blank">Logs/</a></td><td>All log files that are created during build process will be collected here.</td></tr>
+	<tr><td>&emsp;&emsp;<a href="../BuildOutput/stack/Logs/CreateLib.log" target="_blank">CreateLib.log</a></td><td>This log file contains all steps executed during library creation if the process was successful.</td></tr>
+	<tr><td>&emsp;&emsp;<a href="../BuildOutput/stack/Logs/CreateExec.log" target="_blank">CreateExec.log</a></td><td>This log file contains all steps executed during executable creation if the process was successful.</td></tr>
+	<tr><td>&emsp;&emsp;<a href="../BuildOutput/stack/Logs/Error.log" target="_blank">Error.log</a></td><td>This log file contains all steps executed up to the point of error if the process was not successful.</td></tr>
+	<tr><td>&emsp;&emsp;<dfn>NAMELIB</dfn>_compile.log</td><td>This log file contains all output of compiler and linker.</td></tr>
+	<tr><td>&emsp;&emsp;<dfn>NAMELIB</dfn>_elf.log</td><td>This log file contains all output of ELF compilation.</td></tr>
+	<tr><td>&emsp;<a href="../BuildOutput/stack/Objects" target="_blank">Objects/</a></td><td>All temporary object files that are used during build process will be collected here.</td></tr>
+	<tr><td>&emsp;&emsp;*.o</td><td>This files contain the compiled binary code of a C file.</td></tr>
+	<tr><td>&emsp;&emsp;*.d</td><td>This files contain a list of included header files for the corresponding C file (in Make target format).</td></tr>
+	<tr><td>&emsp;3G1300D7000T02_RG1_X_VARI04__<dfn>NAMELIB</dfn>.elf</td><td>The compiled ELF file.</td></tr>
+	<tr><td>&emsp;3G1300D7000T02_RG1_X_VARI04__<dfn>NAMELIB</dfn>.map</td><td>Contains the addresses of all sections and global symbols.</td></tr>
+	<tr><td>&emsp;3G1300D7000T02_RG1_X_VARI04__<dfn>NAMELIB</dfn>_update.map</td><td>The MAP file for the A2L updater (ASAP2Updater.exe).</td></tr>
+	<!--Merged.a2l-->
+	<tr><td>&emsp;MODULES_<dfn>NAMELIB</dfn>_RamRom.log</td><td>Lists the RAM and ROM size of all object files.</td></tr>
+	<tr><td>&emsp;SWC_<dfn>NAMELIB</dfn>_RamRom.log</td><td>Lists the RAM and ROM size of the library.</td></tr>
+	<tr><td>&emsp;<dfn>NAMELIB</dfn>_StackSize.log</td><td>The stack usage determined via gstack.exe for all functions in <dfn>FCT_STACK_SIZE</dfn>.</td></tr>
+	<tr><td>&emsp;<dfn>NAMELIB</dfn>.a</td><td>The created library.</td></tr>
+</table>
+
+<p class="hl3" id="simulationlib">Simulation library</p>
+<p>This creates the SiL simulation library.</p>
+<p>This step uses all <a href="#settings">settings</a> and all <a href="#content">inputs</a> marked with an I.</p>
+<p>To manually execute this step, call <em>create_lib.bat sillib</em> from a DOS prompt.</p>
+<p>The software listed in <a href="#environment">Target Environment</a> marked with an I needs to be installed on the target machine.</p>
+<table class="nttable">
+	<tr><th>Path and Filename</th><th>Description</th></tr>
+	<tr><td><a href="../BuildOutput/sillib" target="_blank">sillib/</a></td><td>All files created during build process will be collected here.</td></tr>
+	<tr><td>&emsp;<a href="../BuildOutput/sillib/HFiles" target="_blank">HFiles/</a></td><td>All custom header files that are used during build process will be collected here.</td></tr>
+	<tr><td>&emsp;<a href="../BuildOutput/sillib/Logs" target="_blank">Logs/</a></td><td>All log files that are created during build process will be collected here.</td></tr>
+	<tr><td>&emsp;&emsp;<a href="../BuildOutput/sillib/Logs/CreateLib.log" target="_blank">CreateLib.log</a></td><td>This log file contains all steps executed during library creation if the process was successful.</td></tr>
+	<tr><td>&emsp;&emsp;<a href="../BuildOutput/sillib/Logs/Error.log" target="_blank">Error.log</a></td><td>This log file contains all steps executed up to the point of error if the process was not successful.</td></tr>
+	<tr><td>&emsp;&emsp;<dfn>NAMELIB</dfn>_SiL_compile.log</td><td>This log file contains all output of compiler and linker.</td></tr>
+	<tr><td>&emsp;<a href="../BuildOutput/sillib/ObjectsSiL" target="_blank">ObjectsSiL/</a></td><td>All temporary object files that are used during build process will be collected here.</td></tr>
+	<tr><td>&emsp;&emsp;*.obj</td><td>This files contain the compiled binary code of a C file.</td></tr>
+	<tr><td>&emsp;<dfn>NAMELIB</dfn>_SiL_<dfn>MSVCBITOPT</dfn>bit.lib</td><td>The file can be used at OEM and at Bosch to create a SiL simulation model of the EPS.</td></tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p class="hl2" id="environment">Target Environment</p>
+<p>The following software needs to be installed on the target machine:</p>
+<table class="nttable">
+	<tr><th>Name of the application</th><th>Used By</th><th>Tested Version</th><th>Release Date</th></tr>
+	<tr><td>Python</td><td>E</td><td>2.7.2</td><td>2011-06-11</td></tr>
+	<tr><td>Vector ASAP2 Toolkit</td><td>E</td><td>4.3</td><td>2007-01-24</td></tr>
+	<tr><td>ODX Create</td><td>E</td><td>2.22</td><td>2018-03-27</td></tr>
+	<tr><td>Green Hills RH850 Compiler</td><td>L</td><td>2015.1.7</td><td>2015-10-22</td></tr>
+	<tr><td>Microsoft Visual Studio Professional (*)</td><td>I</td><td>2015 14.0.25425.01 Update 3</td><td>2016-06-27</td></tr>
+	<tr><td>dSpace RCP and HIL Software</td><td>X</td><td>2018A 18.1.0.197 (x64)</td><td>2018-06-12</td></tr>
+	<tr><td class="ntlegend">&nbsp;</td></tr>
+	<tr><td></td><td class="ntlegend">L == <a href="#standardlib">Standard library (no debug)</a></td></tr>
+	<tr><td></td><td class="ntlegend">E == <a href="#standardexec_file">Standard executeable files  (no debug)</a></td></tr>
+	<tr><td></td><td class="ntlegend">S == <a href="#stackmeasurement">Stack measurement</a></td></tr>
+	<tr><td></td><td class="ntlegend">I == <a href="#simulationlib">Simulation library</a></td></tr>
+
+	<tr><td class="ntlegend" style="font-size: 80%">* == for compilation without further debugging the Express version may be sufficient</td></tr>
+</table>
+
+
+<p class="hl2" id="spec">Specifications</p>
+<p>The following specifications apply to this software package:</p>
+<table class="nttable">
+	<tr><th>Specification</th><th>Value</th></tr>
+	<tr><td>Project name</td><td>"100FIT"</td></tr>
+	<tr><td>Customer identifier</td><td></td></tr>
+	<tr><td>Bosch Label</td><td></td></tr>
+	<tr><td>Build Timestamp</td><td>Tue 02/24/2026</td></tr>
+	<tr><td>AUTOSAR version</td><td>3.2</td></tr>
+	<tr><td>Supported ASAP version</td><td>9.0</td></tr>
+</table>
+
+
+<p class="hl2" id="faq">Pitfalls and FAQ</p>
+<p>The following common problems and mistakes are currently known:</p>
+<ul>
+<li><p>Your modifications in <em>settings.bat</em> do not have any effect?</p>
+	<p class="ntfaq">Please check if you are writing in the upper section, before the <em>) else (</em> line and make sure that the first line sets <dfn>BOBE_USE_OEM_SETTINGS_AT_OEM</dfn> to <em>yes</em>. Also check that you do not the same setting twice (inside the upper block)
+	and that it's not commented out (starting with <em>::</em> or <em>rem</em>).</p>
+<li><p>"Access denied" errors appear in the log?</p>
+	<p class="ntfaq">Please check that you unzipped the BOBE to a directory with full write access (do NOT use a network share). Also check if another instance of BOBE or one of its command lines may still run in the background and blocking a file.</p>
+<li><p>"No such file or directory" or "Syntax error" during batch file execution?</p>
+	<p class="ntfaq">Please check if any path in your settings.bat contains spaces. Try to avoid them by using the short DOS name format instead:
+	Open command prompt in the directory containing the problematic file name and type <em>dir /x</em> to see the short name. Replace the path in the <em>settings.bat</em> with the short name. For example: <em>C:\PROGRA~1</em> instead of <em>C:\Program Files</em>.</p></li>
+<li><p>The script executions stops without creating any output in Log folder:</p>
+	<p class="ntfaq">This may be caused by an internal error in the script. Please check if there are any <em>...-running.log</em> files directly in the BuildOutput/ directory. You can also try to run the scripts from command line (as explained in the process steps) and/or modify the first line of the scripts to <em>@echo on</em>.
+</ul>
+
+
+
+<p><br/></p>
+<hr/>
+<p class="ntcopyright">&copy; Robert Bosch Automotive Steering GmbH &nbsp;&nbsp;&nbsp; Tue 02/24/2026</p>
+</body>
+</html>

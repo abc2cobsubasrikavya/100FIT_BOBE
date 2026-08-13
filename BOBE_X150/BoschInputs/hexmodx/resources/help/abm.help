@@ -1,0 +1,32 @@
+
+                                                    ABM COMMAND
+
+
+Performs ABM and BMI build
+
+Below is the syntax :
+          abm 	-primary address [-bmiprimary address] [-bmisec address] [-device]
+
+---------------+----------------------------------------------------------------------------------------------------
+SWITCHES       |    DESCRIPTION
+---------------+----------------------------------------------------------------------------------------------------
+   -primary    |    Start address of ABM primary location. Mandatory switch. 
+   -bmiprimary |    Start address of BMI primary location. Optional Switch.  
+   -bmisec     |    Start address of BMI secondary location. Optional switch.
+   -device     |    Takes value IFX_65NM, IFX_40NM, DEV5 (It is IFX_40NM DEV5), TC2XX, TC3XX. Optional field.
+               |    Default value is IFX_65nm.
+---------------+----------------------------------------------------------------------------------------------------
+
+Example:
+	1)	read -in rba_BootCtrl_hexmod.hex -igcks true
+		abm -primary 0x80000999
+		write -out _out/output_abm.hex -lyt 0x10		
+
+	2)	read -in rba_BootCtrl_hexmod.hex -igcks true
+		abm -primary 0x800F0000 -bmiprimary 0xAF400000 -bmisec 0xAF400200
+		write -out _out/output_abm.hex -lyt 0x20		
+
+	3)	read -in Test_TC39X.hex -igcks true
+		abm -primary 0x80000000 -device IFX_40NM
+		write -out _out/output_abm.hex -lyt 0x10
+		

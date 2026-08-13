@@ -1,0 +1,26 @@
+
+                                                   SWID COMMAND
+
+
+Sets or test SWID field within each Infoblock.
+
+Below is the syntax :
+                  swid 	-val value  -fc {"test"|"set"}  -t {"IHEX"|"ASCII"}  [-addr blockaddress] 
+
+---------------+----------------------------------------------------------------------------------------------------
+SWITCHES       |    DESCRIPTION
+---------------+----------------------------------------------------------------------------------------------------
+   -val        |    Values to be patched or tested.
+   -fc         |    Takes values "set" or "test". "set" to update the swid value and "test" to test correct swid
+               |    value. Mandatory switch.
+   -t          |    Defines what type of data to be patched or tested. Values can be "IHEX" or "ASCII".
+   -addr       |    Provides the start address of Infoblock for which specified operation should be performed.
+               |    Optional switch.
+---------------+----------------------------------------------------------------------------------------------------
+
+Example:
+	read -in medc18.hex -igCks true
+	blkBuild -start 0x80020000
+	swid -val 0x1234567800010203 -fc set -addr 0x08FC0020 -t hex	
+	write -out output.hex -lyt 0x20
+	

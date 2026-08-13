@@ -1,0 +1,188 @@
+Starting 
+*** Empty output folder C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file 
+***  
+*** Empty build log folder C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\Logs 
+***  
+*** C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\MQB37W_ASC_SAC.a exists :) 
+***  
+*** C:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\linkseglayer.ld exists :) 
+*** C:\toolbase\greenhills_rel\comp_202115_2fp_x64\ccrh850.exe exists :) 
+*** C:\toolbase\greenhills_rel\comp_202115_2fp_x64\gsrec.exe exists :) 
+*** C:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\Data\3G1300D7000T02_RG1_X_VARI04_with_backup_patched.hex exists :) 
+***  
+*** Create ELF file 
+***  
+*** C:\toolbase\greenhills_rel\comp_202115_2fp_x64\ccrh850.exe --no_debug -delete -passsource -ffunctions -recipf -cpu=rh850g3m -no_callt -ignore_callt_state_in_interrupts -large_sda -shorten_loads -shorten_moves --short_enum -nostdlib -reserve_r2 -MD --no_commons -prepare_dispose -inline_prologue -fhard -ansi -Wshadow --prototype_errors -DCOMPILERCFG_EXTENSION_MCAL_FILE -Ogeneral -sda=0 -Mnx -keepmap -map= -cpu=rh850g3m -ffunctions -lnk=-old_section_wildcard_matching -LC:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\Libraries -llibarch_NeededObjects.a -nostartfiles -entry=_rba_SysPreInit_Startup -nostdlib -individual_pragma_data_sections -individual_function_sections -individual_pragma_function_sections -individual_section_name_extra_dot -stack_protector -T C:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\linkseglayer.ld  -o C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\3G1300D7000T02_RG1_X_VARI04__MQB37W_ASC_SAC.elf C:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\Libraries\Mainpath_VARI04_Dev_Lib.a C:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\Libraries\Mainpath_VARI04_Lib.a C:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\Libraries\HWLIB_rel_HW46_FOC13_Faint_off_Lib.a C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\MQB37W_ASC_SAC.a C:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\Libraries\DSFxp.lib C:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\Libraries\RTAOS.a 
+ccrh850: Warning: Option "-map=" with empty argument ignored.
+ccrh850: Warning: Individual Data Sections is not enabled. -individual_pragma_data_sections and -individual_attribute_data_sections ignored
+[elxr] (warning #649) "C:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\linkseglayer.ld", line 3: Preprocessor directive #if found in file which is not being preprocessed
+# if you need an update, change linkseglayer.mak file
+  ^
+dblink: WARNING: 3 problems were encountered while processing debug information, see "C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\3G1300D7000T02_RG1_X_VARI04__MQB37W_ASC_SAC.dle" for details.
+***  
+*** C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\3G1300D7000T02_RG1_X_VARI04__MQB37W_ASC_SAC.elf exists :) 
+***  
+*** create MAP file for a2l updater 
+***  
+*** C:\toolbase\greenhills_rel\comp_202115_2fp_x64\gnm.exe -p -no_dotdot -h -output C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\3G1300D7000T02_RG1_X_VARI04__MQB37W_ASC_SAC_update.map_tmp C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\3G1300D7000T02_RG1_X_VARI04__MQB37W_ASC_SAC.elf 
+***  
+*** C:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\sed.exe  -n -r -f C:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\updater.sed  C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\3G1300D7000T02_RG1_X_VARI04__MQB37W_ASC_SAC_update.map_tmp 
+*** Deleting C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\3G1300D7000T02_RG1_X_VARI04__MQB37W_ASC_SAC_update.map_tmp 
+***  
+*** Create HEX file 
+***  
+*** C:\toolbase\greenhills_rel\comp_202115_2fp_x64\gsrec.exe -noS5 C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\3G1300D7000T02_RG1_X_VARI04__MQB37W_ASC_SAC.elf -o C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\3G1300D7000T02_RG1_X_VARI04__MQB37W_ASC_SAC_pre.hex 
+*** C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\3G1300D7000T02_RG1_X_VARI04__MQB37W_ASC_SAC_pre.hex exists :) 
+***  
+*** Updating the Hexmodx Script 
+*** C:\toolbase\python\3.9.5.0.0\python-3.9.5.amd64\python.exe C:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\VarAddressPatch.py C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\3G1300D7000T02_RG1_X_VARI04__MQB37W_ASC_SAC_update.map C:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\hexmodx_scripts\HexmodX_BOBE_TEMPLATE.cmd C:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\hexmodx_scripts\HexmodX_BOBE.cmd 
+*** C:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\searchandreplace.exe C:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\hexmodx_scripts\HexmodX_BOBE.cmd  C:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\hexmodx_scripts\HexmodX_BOBE.cmd 
+***  
+*** Call HEXMODX Script 
+***  
+*** C:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\hexmodx_scripts\HexmodX_BOBE.cmd 
+[HexmodX]        [14.2.0]       
+Copyright (c) Robert Bosch Gmbh Ltd.
+
+Arguments are read -in C:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\Data\3G1300D7000T02_RG1_X_VARI04_with_backup_patched.hex -id ID1 read -in C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\3G1300D7000T02_RG1_X_VARI04__MQB37W_ASC_SAC_pre.hex -id ID2 -type S19 select -id ID2 patch -t IHEX -addr 0x0000e80c -val 0x31303130 patch -t IHEX -addr 0x0000e800 -val 0x2D2D2D2D patch -t IHEX -addr 0x0000e806 -val 22 crc32 -startaddress 0x0000c000 -endaddress 0x0000e817 -outputaddress 0x0000e818 memCopy -from 0x0000c000 -l 0000281C -to 0x0098800c -o true memcopyacross -id ID1 -from 0x0019630c -l 00002A00 -id2 ID2 -to 0x0019630c -o true -fill 0xFF memcopyacross -id ID1 -from 0x0080000c -l 0000C8B4 -id2 ID2 -to 0x0080000c -o true -fill 0xFF memcopyacross -id ID1 -from 0x0080c8c0 -l 00000574 -id2 ID2 -to 0x0080c8c0 -o true -fill 0xFF memcopyacross -id ID1 -from 0x0080ce34 -l 00000544 -id2 ID2 -to 0x0080ce34 -o true -fill 0xFF memcopyacross -id ID1 -from 0x0080d378 -l 00000CCC -id2 ID2 -to 0x0080d378 -o true -fill 0xFF select -id ID1 memcopyacross -id ID2 -from 0x00048000 -l 0x001B8000 -id2 ID1 -to 0x00048000 -o true -fill 0xFF memcopyacross -id ID2 -from 0x00800000 -l 0x00188000 -id2 ID1 -to 0x00800000 -o true -fill 0xFF memcopyacross -id ID2 -from 0x00988000 -l 0x00048000 -id2 ID1 -to 0x00988000 -o true -fill 0xFF crc32 -startaddress 0x0100A000 -endaddress 0x010DFFFF -outputaddress 0x00114108 crc32 -startaddress 0x01004000 -endaddress 0x01005FFF -outputaddress 0x0011410c crc32 -startaddress 0x010E0000 -endaddress 0x010FFFFF -outputaddress 0x00114110 crc32 -startaddress 0x00800000 -endaddress 0x00987FFB -outputaddress 0x00987FFC crc32 -startaddress 0x00988000 -endaddress 0x009CFFFB -outputaddress 0x009CFFFC crc32 -startaddress 0x009d8000 -endaddress 0x009fffff -outputaddress 0x00114114 crc32 -startaddress 0x00198d0c -endaddress 00198E6F -outputaddress 0x00198e70 crc32 -startaddress 0x00048000 -endaddress 0x001FFFFB -outputaddress 0x001FFFFC select -id ID2 memcopyacross -id ID1 -from 0x001FFFFC -l 0x00000004 -id2 ID2 -to 0x001FFFFC -o true -fill 0xFF memcopyacross -id ID1 -from 0x00987FFC -l 0x00000004 -id2 ID2 -to 0x00987FFC -o true -fill 0xFF memcopyacross -id ID1 -from 0x009CFFFC -l 0x00000004 -id2 ID2 -to 0x009CFFFC -o true -fill 0xFF select -id ID1 memcopyacross -id ID2 -from 0x001FFFFF -l 0x00000001 -id2 ID1 -to 0x001FFFFC -o true -fill 0xFF memcopyacross -id ID2 -from 0x001FFFFE -l 0x00000001 -id2 ID1 -to 0x001FFFFD -o true -fill 0xFF memcopyacross -id ID2 -from 0x001FFFFD -l 0x00000001 -id2 ID1 -to 0x001FFFFE -o true -fill 0xFF memcopyacross -id ID2 -from 0x001FFFFC -l 0x00000001 -id2 ID1 -to 0x001FFFFF -o true -fill 0xFF memcopyacross -id ID2 -from 0x00987FFF -l 0x00000001 -id2 ID1 -to 0x00987FFC -o true -fill 0xFF memcopyacross -id ID2 -from 0x00987FFE -l 0x00000001 -id2 ID1 -to 0x00987FFD -o true -fill 0xFF memcopyacross -id ID2 -from 0x00987FFD -l 0x00000001 -id2 ID1 -to 0x00987FFE -o true -fill 0xFF memcopyacross -id ID2 -from 0x00987FFC -l 0x00000001 -id2 ID1 -to 0x00987FFF -o true -fill 0xFF memcopyacross -id ID2 -from 0x009CFFFF -l 0x00000001 -id2 ID1 -to 0x009CFFFC -o true -fill 0xFF memcopyacross -id ID2 -from 0x009CFFFE -l 0x00000001 -id2 ID1 -to 0x009CFFFD -o true -fill 0xFF memcopyacross -id ID2 -from 0x009CFFFD -l 0x00000001 -id2 ID1 -to 0x009CFFFE -o true -fill 0xFF memcopyacross -id ID2 -from 0x009CFFFC -l 0x00000001 -id2 ID1 -to 0x009CFFFF -o true -fill 0xFF write -out C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\3G1300D7000T02_RG1_X_VARI04__MQB37W_ASC_SAC_StartAtDrive.hex exit 
+HEXMODX-INFO-COMMAND                                        read -in C:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\Data\3G1300D7000T02_RG1_X_VARI04_with_backup_patched.hex -id ID1 
+HEXMODX-INFO-COMMAND                                        read -in C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\3G1300D7000T02_RG1_X_VARI04__MQB37W_ASC_SAC_pre.hex -id ID2 -type S19 
+HEXMODX-INFO-COMMAND                                        select -id ID2 
+HEXMODX-INFO-COMMAND                                        patch -t IHEX -addr 0x0000e80c -val 0x31303130 
+HEXMODX-INFO-COMMAND                                        patch -t IHEX -addr 0x0000e800 -val 0x2D2D2D2D 
+HEXMODX-INFO-COMMAND                                        patch -t IHEX -addr 0x0000e806 -val 22 
+HEXMODX-INFO-COMMAND                                        crc32 -startaddress 0x0000c000 -endaddress 0x0000e817 -outputaddress 0x0000e818 
+HEXMODX-INFO-COMMAND                                        memcopy -from 0x0000c000 -l 0000281C -to 0x0098800c -o true 
+HEXMODX-INFO-COMMAND                                        memcopyacross -id ID1 -from 0x0019630c -l 00002A00 -id2 ID2 -to 0x0019630c -o true -fill 0xFF 
+HEXMODX-INFO-COMMAND                                        memcopyacross -id ID1 -from 0x0080000c -l 0000C8B4 -id2 ID2 -to 0x0080000c -o true -fill 0xFF 
+HEXMODX-INFO-COMMAND                                        memcopyacross -id ID1 -from 0x0080c8c0 -l 00000574 -id2 ID2 -to 0x0080c8c0 -o true -fill 0xFF 
+HEXMODX-INFO-COMMAND                                        memcopyacross -id ID1 -from 0x0080ce34 -l 00000544 -id2 ID2 -to 0x0080ce34 -o true -fill 0xFF 
+HEXMODX-INFO-COMMAND                                        memcopyacross -id ID1 -from 0x0080d378 -l 00000CCC -id2 ID2 -to 0x0080d378 -o true -fill 0xFF 
+HEXMODX-INFO-COMMAND                                        select -id ID1 
+HEXMODX-INFO-COMMAND                                        memcopyacross -id ID2 -from 0x00048000 -l 0x001B8000 -id2 ID1 -to 0x00048000 -o true -fill 0xFF 
+HEXMODX-INFO-COMMAND                                        memcopyacross -id ID2 -from 0x00800000 -l 0x00188000 -id2 ID1 -to 0x00800000 -o true -fill 0xFF 
+HEXMODX-INFO-COMMAND                                        memcopyacross -id ID2 -from 0x00988000 -l 0x00048000 -id2 ID1 -to 0x00988000 -o true -fill 0xFF 
+HEXMODX-INFO-COMMAND                                        crc32 -startaddress 0x0100A000 -endaddress 0x010DFFFF -outputaddress 0x00114108 
+HEXMODX-INFO-COMMAND                                        crc32 -startaddress 0x01004000 -endaddress 0x01005FFF -outputaddress 0x0011410c 
+HEXMODX-INFO-COMMAND                                        crc32 -startaddress 0x010E0000 -endaddress 0x010FFFFF -outputaddress 0x00114110 
+HEXMODX-INFO-COMMAND                                        crc32 -startaddress 0x00800000 -endaddress 0x00987FFB -outputaddress 0x00987FFC 
+HEXMODX-INFO-COMMAND                                        crc32 -startaddress 0x00988000 -endaddress 0x009CFFFB -outputaddress 0x009CFFFC 
+HEXMODX-INFO-COMMAND                                        crc32 -startaddress 0x009d8000 -endaddress 0x009fffff -outputaddress 0x00114114 
+HEXMODX-INFO-COMMAND                                        crc32 -startaddress 0x00198d0c -endaddress 00198E6F -outputaddress 0x00198e70 
+HEXMODX-INFO-COMMAND                                        crc32 -startaddress 0x00048000 -endaddress 0x001FFFFB -outputaddress 0x001FFFFC 
+HEXMODX-INFO-COMMAND                                        select -id ID2 
+HEXMODX-INFO-COMMAND                                        memcopyacross -id ID1 -from 0x001FFFFC -l 0x00000004 -id2 ID2 -to 0x001FFFFC -o true -fill 0xFF 
+HEXMODX-INFO-COMMAND                                        memcopyacross -id ID1 -from 0x00987FFC -l 0x00000004 -id2 ID2 -to 0x00987FFC -o true -fill 0xFF 
+HEXMODX-INFO-COMMAND                                        memcopyacross -id ID1 -from 0x009CFFFC -l 0x00000004 -id2 ID2 -to 0x009CFFFC -o true -fill 0xFF 
+HEXMODX-INFO-COMMAND                                        select -id ID1 
+HEXMODX-INFO-COMMAND                                        memcopyacross -id ID2 -from 0x001FFFFF -l 0x00000001 -id2 ID1 -to 0x001FFFFC -o true -fill 0xFF 
+HEXMODX-INFO-COMMAND                                        memcopyacross -id ID2 -from 0x001FFFFE -l 0x00000001 -id2 ID1 -to 0x001FFFFD -o true -fill 0xFF 
+HEXMODX-INFO-COMMAND                                        memcopyacross -id ID2 -from 0x001FFFFD -l 0x00000001 -id2 ID1 -to 0x001FFFFE -o true -fill 0xFF 
+HEXMODX-INFO-COMMAND                                        memcopyacross -id ID2 -from 0x001FFFFC -l 0x00000001 -id2 ID1 -to 0x001FFFFF -o true -fill 0xFF 
+HEXMODX-INFO-COMMAND                                        memcopyacross -id ID2 -from 0x00987FFF -l 0x00000001 -id2 ID1 -to 0x00987FFC -o true -fill 0xFF 
+HEXMODX-INFO-COMMAND                                        memcopyacross -id ID2 -from 0x00987FFE -l 0x00000001 -id2 ID1 -to 0x00987FFD -o true -fill 0xFF 
+HEXMODX-INFO-COMMAND                                        memcopyacross -id ID2 -from 0x00987FFD -l 0x00000001 -id2 ID1 -to 0x00987FFE -o true -fill 0xFF 
+HEXMODX-INFO-COMMAND                                        memcopyacross -id ID2 -from 0x00987FFC -l 0x00000001 -id2 ID1 -to 0x00987FFF -o true -fill 0xFF 
+HEXMODX-INFO-COMMAND                                        memcopyacross -id ID2 -from 0x009CFFFF -l 0x00000001 -id2 ID1 -to 0x009CFFFC -o true -fill 0xFF 
+HEXMODX-INFO-COMMAND                                        memcopyacross -id ID2 -from 0x009CFFFE -l 0x00000001 -id2 ID1 -to 0x009CFFFD -o true -fill 0xFF 
+HEXMODX-INFO-COMMAND                                        memcopyacross -id ID2 -from 0x009CFFFD -l 0x00000001 -id2 ID1 -to 0x009CFFFE -o true -fill 0xFF 
+HEXMODX-INFO-COMMAND                                        memcopyacross -id ID2 -from 0x009CFFFC -l 0x00000001 -id2 ID1 -to 0x009CFFFF -o true -fill 0xFF 
+HEXMODX-INFO-COMMAND                                        write -out C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\3G1300D7000T02_RG1_X_VARI04__MQB37W_ASC_SAC_StartAtDrive.hex 
+HEXMODX-INFO-COMMAND                                        exit 
+HEXMODX-INFO-READ                                           Reading input file <3G1300D7000T02_RG1_X_VARI04_with_backup_patched.hex> 
+HEXMODX-INFO-READ-PARSER                                    Reading Line: 16384
+HEXMODX-INFO-READ-PARSER                                    Reading Line: 32768
+HEXMODX-INFO-READ-PARSER                                    Reading Line: 49152
+HEXMODX-INFO-READ-PARSER                                    Reading Line: 65536
+HEXMODX-INFO-READ-PARSER                                    Reading Line: 81920
+HEXMODX-INFO-READ-PARSER                                    Reading Line: 98304
+HEXMODX-INFO-READ-PARSER                                    Reading Line: 114688
+HEXMODX-INFO-READ-PARSER                                    Reading Line: 131072
+HEXMODX-INFO-READ-PARSER                                    Reading Line: 147456
+HEXMODX-INFO-READ-PARSER                                    Reading Line: 163840
+HEXMODX-INFO-READ                                           Reading input file <3G1300D7000T02_RG1_X_VARI04_with_backup_patched.hex> completed successfully.
+HEXMODX-INFO-READ                                           Reading input file <3G1300D7000T02_RG1_X_VARI04__MQB37W_ASC_SAC_pre.hex> 
+HEXMODX-INFO-READ-PARSER                                    Readling Line: 16384
+HEXMODX-INFO-READ-PARSER                                    Readling Line: 32768
+HEXMODX-INFO-READ-PARSER                                    Readling Line: 49152
+HEXMODX-INFO-READ                                           Reading input file <3G1300D7000T02_RG1_X_VARI04__MQB37W_ASC_SAC_pre.hex> completed successfully.
+HEXMODX-INFO-SELECT                                         Selecting the input file C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\3G1300D7000T02_RG1_X_VARI04__MQB37W_ASC_SAC_pre.hex
+HEXMODX-INFO-PATCH                                          Started Patch Operation at Address = 0x0000E80C 
+HEXMODX-INFO-PATCH                                          Completed Patch Operation
+HEXMODX-INFO-PATCH                                          Started Patch Operation at Address = 0x0000E800 
+HEXMODX-INFO-PATCH                                          Completed Patch Operation
+HEXMODX-INFO-PATCH                                          Started Patch Operation at Address = 0x0000E806 
+HEXMODX-INFO-PATCH                                          Completed Patch Operation
+HEXMODX-INFO-MEMCOPY                                        Performing the Memcopy Operation from 0x0000C000 to 0x0098800C
+HEXMODX-INFO-MEMCOPY                                        Performing the Memcopy Operation from 0x0019630C to 0x0019630C
+HEXMODX-INFO-MEMCOPY                                        Performing the Memcopy Operation from 0x0080000C to 0x0080000C
+HEXMODX-INFO-MEMCOPY                                        Performing the Memcopy Operation from 0x0080C8C0 to 0x0080C8C0
+HEXMODX-INFO-MEMCOPY                                        Performing the Memcopy Operation from 0x0080CE34 to 0x0080CE34
+HEXMODX-INFO-MEMCOPY                                        Performing the Memcopy Operation from 0x0080D378 to 0x0080D378
+HEXMODX-INFO-SELECT                                         Selecting the input file C:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\Data\3G1300D7000T02_RG1_X_VARI04_with_backup_patched.hex
+HEXMODX-INFO-MEMCOPY                                        Performing the Memcopy Operation from 0x00048000 to 0x00048000
+HEXMODX-INFO-MEMCOPY                                        Performing the Memcopy Operation from 0x00800000 to 0x00800000
+HEXMODX-INFO-MEMCOPY                                        Performing the Memcopy Operation from 0x00988000 to 0x00988000
+HEXMODX-INFO-SELECT                                         Selecting the input file C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\3G1300D7000T02_RG1_X_VARI04__MQB37W_ASC_SAC_pre.hex
+HEXMODX-INFO-MEMCOPY                                        Performing the Memcopy Operation from 0x001FFFFC to 0x001FFFFC
+HEXMODX-INFO-MEMCOPY                                        Performing the Memcopy Operation from 0x00987FFC to 0x00987FFC
+HEXMODX-INFO-MEMCOPY                                        Performing the Memcopy Operation from 0x009CFFFC to 0x009CFFFC
+HEXMODX-INFO-SELECT                                         Selecting the input file C:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\Data\3G1300D7000T02_RG1_X_VARI04_with_backup_patched.hex
+HEXMODX-INFO-MEMCOPY                                        Performing the Memcopy Operation from 0x001FFFFF to 0x001FFFFC
+HEXMODX-INFO-MEMCOPY                                        Performing the Memcopy Operation from 0x001FFFFE to 0x001FFFFD
+HEXMODX-INFO-MEMCOPY                                        Performing the Memcopy Operation from 0x001FFFFD to 0x001FFFFE
+HEXMODX-INFO-MEMCOPY                                        Performing the Memcopy Operation from 0x001FFFFC to 0x001FFFFF
+HEXMODX-INFO-MEMCOPY                                        Performing the Memcopy Operation from 0x00987FFF to 0x00987FFC
+HEXMODX-INFO-MEMCOPY                                        Performing the Memcopy Operation from 0x00987FFE to 0x00987FFD
+HEXMODX-INFO-MEMCOPY                                        Performing the Memcopy Operation from 0x00987FFD to 0x00987FFE
+HEXMODX-INFO-MEMCOPY                                        Performing the Memcopy Operation from 0x00987FFC to 0x00987FFF
+HEXMODX-INFO-MEMCOPY                                        Performing the Memcopy Operation from 0x009CFFFF to 0x009CFFFC
+HEXMODX-INFO-MEMCOPY                                        Performing the Memcopy Operation from 0x009CFFFE to 0x009CFFFD
+HEXMODX-INFO-MEMCOPY                                        Performing the Memcopy Operation from 0x009CFFFD to 0x009CFFFE
+HEXMODX-INFO-MEMCOPY                                        Performing the Memcopy Operation from 0x009CFFFC to 0x009CFFFF
+HEXMODX-INFO-WRITE                                          Writing file 3G1300D7000T02_RG1_X_VARI04__MQB37W_ASC_SAC_StartAtDrive.hex
+HEXMODX-INFO-EXIT[ FLOW ]                                   Exiting HexmodX using exit command
+*** C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\3G1300D7000T02_RG1_X_VARI04__MQB37W_ASC_SAC_StartAtDrive.hex exists :) 
+*** Deleting C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\3G1300D7000T02_RG1_X_VARI04__MQB37W_ASC_SAC_pre.hex 
+***  
+*** Merge A2L 
+*** \A2L\merge_update 
+*** ************************************** 
+*** WARNING: No a2l file available in \A2L\merge_update 
+*** ************************************** 
+***  
+***  
+*** Update A2L 
+***  
+*** C:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\sed.exe -r s/"ARRAY_SIZE (.*)$"/"MATRIX_DIM \\1 1 1"/ C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\3G1300D7000T02_RG1_X_VARI04_Merged.a2l into C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\3G1300D7000T02_RG1_X_VARI04_Merged.a2l_fixed 
+*** c:\git\100fit\tool_forks\asap2_tools\updater.exe -I C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\3G1300D7000T02_RG1_X_VARI04_Merged.a2l_fixed -O C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\3G1300D7000T02_RG1_X_VARI04_Updated.a2l -A C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\3G1300D7000T02_RG1_X_VARI04__MQB37W_ASC_SAC_update.map -L C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\Logs\MQB37W_ASC_SAC_a2l_update.log 
+*** Deleting C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\UPDATER.INI 
+*** Deleting C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\MERGER.INI 
+*** Deleting C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\3G1300D7000T02_RG1_X_VARI04_Merged.a2l 
+*** Deleting C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\3G1300D7000T02_RG1_X_VARI04_Merged.a2l_fixed 
+***  
+*** Call ODX Create 
+***  
+***  
+***  
+*** ~~ Create ODX Software Version F150 with Software Part Number: 3QH907164H 
+*** C:\make_tools\ODXCreate\ODXCreate.exe C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\Odx\Main_Odx_Config_BankAB_OEM_FDS.ocnf 
+*** ~~ Create ODX Software Version F150 with Software Part Number: 3QN907145A 
+*** C:\make_tools\ODXCreate\ODXCreate.exe C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\Odx\Main_Odx_Config_BankAB_OEM_FDS.ocnf 
+*** ~~ Create ODX Software Version F150 with Software Part Number: 5QS907164 
+*** C:\make_tools\ODXCreate\ODXCreate.exe C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\Odx\Main_Odx_Config_BankAB_OEM_FDS.ocnf 
+*** ~~ Create ODX Software Version F150 with Software Part Number: 5QS907164 
+*** C:\make_tools\ODXCreate\ODXCreate.exe C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\Odx\Main_Odx_Config_BankAB_OEM_FDS.ocnf 
+*** Deleting C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\*.dla 
+*** Deleting C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\*.dle 
+*** Deleting C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\*.dnm 
+*** Deleting C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\*.dep 
+*** Deleting C:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\DataODX\Backup_Drive_Bank_A.* 
+*** Deleting C:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\DataODX\Backup_SysHex.* 
+*** Deleting C:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\DataODX\Drive_Bank_A.* 
+*** Deleting C:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\DataODX\Drive_Bank_B.* 
+*** Deleting C:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\DataODX\Oem_Code.* 
+***  
+*** ****************************** 
+*** standard_executable_file build done sucessfully 
+*** ****************************** 

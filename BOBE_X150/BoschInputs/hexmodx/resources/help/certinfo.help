@@ -1,0 +1,24 @@
+
+                                                    MDG1TPORT CERTINFO COMMAND
+
+
+Generate certificate information in xml file for the given hex file.
+
+Below is the syntax :
+          CERTINFO -inputfile [input hex file name] -mode [bigendian or littleendian] -hsm_file [HSM xml configuration file] -hsm_config [true or false to enable HSM configuration handling] -output [output xml file name] -infoblockaddr [infoblock start address]       
+
+----------------------+---------------------------------------------------------------------------------
+SWITCHES              |    DESCRIPTION																	
+----------------------+---------------------------------------------------------------------------------
+   -inputfile         |    Input hex file name. 																										
+   -mode           	  |    Mode type eg. bigendian or littleendian.												
+   -hsm_file   		  |    HSM configuration xml file name.																
+   -hsm_config        |    true or false to enable HSM configuration handling.	
+   -infoblockaddress  |    Infoblock start address.		
+   -output            |    Output xml file name.   													   
+----------------------+---------------------------------------------------------------------------------
+
+Example:
+	1)	CERTINFO -inputfile MG1CS080_02_40P_T0A00_HSM2.hex -mode LittleEndian -infoblockaddr 0x80000020 -output signInfo.xml
+	
+	2)  CERTINFO -inputfile HSM.hex -mode LittleEndian -hsm_file merged_corecfg_export.xml -hsm_config true -output signInfo.xml

@@ -1,0 +1,29 @@
+ 
+                                                  CONFIG Additional COMMAND
+
+
+Checks for data of type IHEX, ASCII or reference data at a particular address.
+
+Below is the syntax :
+                 check 	-t {"IHEX"|"ASCII"|"REF"}  -addr address  -val value  [-l len]  [-n name] 
+
+----------------+----------------------------------------------------------------------------------------------------
+SWITCHES        |    DESCRIPTION
+----------------+----------------------------------------------------------------------------------------------------
+   -h           |    Specifies type IHEX, REF or ASCII. Mandatory switch.
+   -ver         |    Address at which the data is checked. Mandatory switch.
+   -?           |    Specifies the value to be checked. If the type is REF, value at address specified in -val is
+                |    considered for comparison. Mandatory switch.
+   -compensation|    For type IHEX and ASCII, length switch is an optional. If the type is REF then -l is a mandatory
+                |    switch.
+   -plv         |    Specifies the name of the command. Optional.
+   -overwrite   |    Specifies the name of the command. Optional.
+   -logfile     |    Specifies the name of the command. Optional.
+   -reset       |    Specifies the name of the command. Optional.
+   -byteorder   |    Specifies the name of the command. Optional.
+   -timestamp   |    Specifies the name of the command. Optional.  
+----------------+----------------------------------------------------------------------------------------------------
+
+Example:
+	
+	

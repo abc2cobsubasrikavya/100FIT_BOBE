@@ -1,0 +1,21 @@
+
+                                                    LOG COMMAND
+
+
+Logs information of the basis infoblock and checksum entries.
+
+Below is the syntax :
+                                        log 	[-ib filename]  [-ck filename] 
+
+---------------+----------------------------------------------------------------------------------------------------
+SWITCHES       |    DESCRIPTION
+---------------+----------------------------------------------------------------------------------------------------
+   -ib         |    Output file path. Logs basis infoblock information. Optional switch.
+   -ck         |    Output file path. Logs checksum entry information. Optional switch.
+---------------+----------------------------------------------------------------------------------------------------
+
+Example:
+	read -in medc18.hex
+	blkbuild -start 0x80020000
+	log -ib ibBefore.txt -ck cksBefore.xml
+	

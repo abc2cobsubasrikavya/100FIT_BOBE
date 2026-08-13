@@ -1,0 +1,37 @@
+
+                                                  CONFIG SPLIT COMMAND
+
+
+Config split command implements the split functionality
+
+-----------------------+----------------------------------------------------------------------------------------------
+SWITCHES               |    DESCRIPTION
+-----------------------+----------------------------------------------------------------------------------------------
+   -in_t               |    Template input XML file.
+   -split_in           |    Input file for split.
+   -out_t              |    Template output XML file.
+   -split_out          |    Output file for Split.
+   -rule_t             |    Template rules XML file.
+   -split_rule         |    Rules XML file for split.
+   -hex_split_in       |    Input HEX file for split.
+   -hexmod_split_log   |    Log file for hexmod split.
+   -hexmod18           |    To identify it is MDG1 project.
+-----------------------+-----------------------------------------------------------------------------------------------
+
+Example:
+
+--split_func
+--core_exp          _gen/swb/module/coreproc/filelist_gen_merged_exp.txt
+--in_t              _gen/swb/module/hexmod/INPUT.XT
+--split_in          _gen/swb/module/hexmod/data_input.xml
+--rule_t            _gen/swb/module/hexmod/RULES.XT
+--split_rule        _gen/swb/module/hexmod/data_rules.xml
+--out_t             _gen/swb/module/hexmod/OUTPUT.XT
+--split_out         _gen/swb/module/hexmod/data_output.xml
+--hex_split_in      _bin/swb/R4Cx800xB.hex
+--hex_split_out     _bin/swb/filegroup/results/R4Cx800xB_data.hex
+--hexmod_split_log  _log/swb/module/hexmod/hexmod_data.log
+--logfile           _log/swb/module/hexmod/config_hexmod_data.log
+--hexmod18    
+--lyt        0x10
+	

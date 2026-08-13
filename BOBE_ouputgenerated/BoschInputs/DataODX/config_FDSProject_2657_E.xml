@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<signtool usage="sign" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="config.xsd">
+	<fds-project>
+		<name>37AW-SUV/MQB41BW_100Fit</name>
+		<fdsident>2657</fdsident>
+	</fds-project>
+	<hardware>
+		<partno>Hardware-Teilenummer</partno>
+		<basicecu>Name Grundsteuergerät</basicecu>
+		<project>Projektpfad</project> 
+		<zsbno>ZSB-Nummer</zsbno>
+		<version>Hardware-Version</version>
+	</hardware>
+	<software>
+		<partno>Software-Teilenummer</partno>
+		<version>Software-Version</version>
+	</software>
+	<dev-key>
+		<file>keys/FDSProject_2657_E.p8</file>
+		<type>RSA</type>
+		<state>unencrypted</state>
+	</dev-key>
+	<signature>
+		<encryption-method>SHA256withRSAandMGF1</encryption-method>
+		<keygen-method>SHA256</keygen-method>
+	</signature>
+	<ecu-serialno>Controller Serial</ecu-serialno>
+
+	<!-- Optional -->
+	<sgm>
+		<xml version="1.0" encoding="UTF-8"/>
+		<file-extension>_E</file-extension>				<!-- Optional, nur "_E", "_S" und "" gültig -->
+		<checksum>0xFFFF</checksum>						<!-- Optional, nur "0xFFFF" und "" gültig -->
+	</sgm>
+
+	<!-- Optional -->
+	<odx>
+		<xml version="1.0" encoding="UTF-8"/>
+		<file-extension>_E</file-extension>				<!-- Optional, nur "_E", "_S" und "" gültig -->
+	</odx>
+
+</signtool>

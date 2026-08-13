@@ -1,0 +1,26 @@
+
+                                                    CLEANUP COMMAND
+
+
+Performs Cleanup for given block address.
+
+Below is the syntax :
+           cleanup 	-blockaddress [blockaddress] -filename [filename] -type [typeof hex file]
+
+------------------+---------------------------------------------------------------------
+SWITCHES          |    DESCRIPTION														
+------------------+---------------------------------------------------------------------
+   -blockaddress  |    Start address of the block in the input hex file.				
+   -filename      |    Output file name.		    									
+   -type          |    Type of output HEX file. By default it is IHEX					
+------------------+---------------------------------------------------------------------
+
+
+Example:
+	1)	read -in medc18_tmp.hex -type IHEX cleanup -blockaddress 0x80000020 -filename  output.hex -type IHEX
+	
+	2)  read -in medc18_tmp.hex -type IHEX cleanup -blockaddress 0x80000020 -filename  output.hex
+
+
+
+		

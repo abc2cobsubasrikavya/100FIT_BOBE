@@ -1,0 +1,51 @@
+
+                                               SPLITINFOBLOCK COMMAND
+
+
+Splits input hex file based on infoblocks.
+
+Below is the syntax :
+              
+              splitinfoblock        -infoblocknames [infoblock names | ALL]     
+                                    -addr [start address]
+                                    -dir [output directory]
+                                    -type [output file type { IHEX/S19/BIN }]
+                                    -lyt [output file layput]
+                                     
+
+--------------------------+----------------------------------------------------------------------------------------------------
+SWITCHES                  |    DESCRIPTION
+--------------------------+----------------------------------------------------------------------------------------------------
+   -infoblocknames        |    Infoblock names which should be written in seperate hex file
+                          |    You can give ALL value to split all infoblocks. Mandatory switch.
+   -addr                  |    Start address to perform blockbuild. OR perform blockbuild separately. Optional switch.
+   -dir                   |    Output directory path. Default is present working directory. Optional switch.
+   -type                  |    Output file type. Default type is IHEX. Optional switch. 
+   -lyt                   |    Specifies the layout that the output hex file must be serialized with. Default layout of 0x10.
+                          |    Optional switch.
+--------------------------+----------------------------------------------------------------------------------------------------
+
+
+Alternative switches:
+                 
+                 -infoblocknames   |   -ibnames, -infoblknames
+                 -addr             |   -address
+                 -lyt              |   -layout
+
+Tip: 
+    You can perform blockbuild operation separately using 'blkbuild' command and then perform infoblock split operation
+    using 'splitinfoblock' command without giving '-addr' or '-address' command option. Refer Example(3)
+
+Example:
+        1)  read -in medc18.hex -type hex ^
+            splitinfoblock -addr 0x80000020 -infoblocknames ALL -dir _out/infoblocks/
+            
+        2)  read -in medc18.hex -type hex ^
+            splitinfoblock -addr 0x80000020 -infoblocknames CB,DS0,ASW1 -type bin -lyt 0x20
+
+        3)  read -in medc18.hex -type hex ^
+            blkbuild  -start 0x80000020 ^
+            splitinfoblock -infoblocknames ALL -dir _out/infoblocks
+
+
+

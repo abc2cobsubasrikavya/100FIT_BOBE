@@ -1,0 +1,26 @@
+
+                                               INFOTABLELOG COMMAND
+
+
+Logs the Infotable information of each Infoblock into an xml file.
+
+Below is the syntax :
+                            infotablelog 	-out filepath  -log {address|"all"|blockName} 
+
+---------------+----------------------------------------------------------------------------------------------------
+SWITCHES       |    DESCRIPTION
+---------------+----------------------------------------------------------------------------------------------------
+   -out        |    Output infotable xml file path.
+   -log        |    Logs infotable information of a specified block or all the blocks. It takes values such as start
+               |    address of a block, "all" to log all the infoblock information, or blockname such as "ASW0".
+               |    Mandatory switch.
+---------------+----------------------------------------------------------------------------------------------------
+
+Example:
+	read -in medc18.hex
+	blkbuild -start 0x80020000
+	infotablelog -out AddressModel.xml -log 0x80100000
+	infotablelog -out AddressModel.xml -log all
+	infotablelog -out AddressModel.xml -log ASW0
+	write -out output.hex -lyt 0x20
+	

@@ -1,0 +1,296 @@
+[HexmodX]        [11.0.0]       
+Copyright (c) Robert Bosch Gmbh Ltd.
+
+HEXMODX-INFO-COMMAND                                        read -in medc18.hex 
+HEXMODX-INFO-COMMAND                                        blkbuild -start 0x9000000 
+HEXMODX-INFO-COMMAND                                        write -out _out/output.hex -lyt 0x20 
+HEXMODX-INFO-READ                                           Reading input file <medc18.hex> 
+HEXMODX-INFO-READ-PARSER                                    Reading Line: 16384
+HEXMODX-INFO-READ-PARSER                                    Reading Line: 32768
+HEXMODX-INFO-READ-PARSER                                    Reading Line: 49152
+HEXMODX-INFO-READ-PARSER                                    Reading Line: 65536
+HEXMODX-INFO-READ-PARSER                                    Reading Line: 81920
+HEXMODX-INFO-READ-PARSER                                    Reading Line: 98304
+HEXMODX-INFO-READ-PARSER                                    Reading Line: 114688
+HEXMODX-INFO-READ-PARSER                                    Reading Line: 131072
+HEXMODX-INFO-READ-PARSER                                    Reading Line: 147456
+HEXMODX-INFO-READ-PARSER                                    Reading Line: 163840
+HEXMODX-INFO-READ-PARSER                                    Reading Line: 180224
+HEXMODX-INFO-READ-PARSER                                    Reading Line: 196608
+HEXMODX-INFO-READ-PARSER                                    Reading Line: 212992
+HEXMODX-INFO-READ-PARSER                                    Reading Line: 229376
+HEXMODX-INFO-READ                                           Reading input file <medc18.hex> completed successfully.
+HEXMODX-INFO-INFOBLOCK-READ                                 Building Infoblock found at : 0x9000000
+HEXMODX-INFO-INFOBLOCK-TYPE                                 MDG type is MDG1
+HEXMODX-INFO-INFOBLOCK-VERSION                              Infoblock version 10 found
+HEXMODX-INFO-INFOBLOCK-READ                                 Reading Infoblock - ASW0
+HEXMODX-INFO-CHECKSUMBLK-READ                               Reading Checksum Block - 0
+HEXMODX-INFO-CHECKSUMBLK-READ                               Reading Checksum Block - 1
+HEXMODX-INFO-CHECKSUMBLK-READ                               Reading Checksum Block - 2
+HEXMODX-INFO-CHECKSUMBLK-READ                               Reading Checksum Block - 3
+HEXMODX-INFO-CHECKSUMBLK-READ                               Reading Checksum Block - 4
+HEXMODX-INFO-CHECKSUMBLK-READ                               Reading Checksum Block - 5
+HEXMODX-INFO-CHECKSUMBLK-READ                               Reading Checksum Block - 6
+HEXMODX-INFO-CHECKSUMBLK-READ                               Reading Checksum Block - 7
+HEXMODX-INFO-CHECKSUMBLK-READ                               Reading Checksum Block - 8
+HEXMODX-INFO-CHECKSUMBLK-READ                               Reading Checksum Block - 9
+HEXMODX-INFO-CHECKSUMBLK-READ                               Reading Checksum Block - 10
+HEXMODX-INFO-CHECKSUMBLK-READ                               Reading Checksum Block - 11
+HEXMODX-INFO-CHECKSUMBLK-READ                               Reading Checksum Block - 12
+HEXMODX-INFO-INFOBLOCK-READ                                 Building Infoblock found at : 0x9100000
+HEXMODX-INFO-INFOBLOCK-TYPE                                 MDG type is MDG1
+HEXMODX-INFO-INFOBLOCK-VERSION                              Infoblock version 10 found
+HEXMODX-INFO-INFOBLOCK-READ                                 Reading Infoblock - ASW1
+HEXMODX-INFO-CHECKSUMBLK-READ                               Reading Checksum Block - 0
+HEXMODX-INFO-CHECKSUMBLK-READ                               Reading Checksum Block - 1
+HEXMODX-INFO-INFOBLOCK-READ                                 Building Infoblock found at : 0x91f0000
+HEXMODX-INFO-INFOBLOCK-TYPE                                 MDG type is MDG1
+HEXMODX-INFO-INFOBLOCK-VERSION                              Infoblock version 10 found
+HEXMODX-INFO-INFOBLOCK-READ                                 Reading Infoblock - ASW2
+HEXMODX-INFO-CHECKSUMBLK-READ                               Reading Checksum Block - 0
+HEXMODX-INFO-INFOBLOCK-READ                                 Building Infoblock found at : 0x9280000
+HEXMODX-INFO-INFOBLOCK-TYPE                                 MDG type is MDG1
+HEXMODX-INFO-INFOBLOCK-VERSION                              Infoblock version 10 found
+HEXMODX-INFO-INFOBLOCK-READ                                 Reading Infoblock - DS0
+HEXMODX-INFO-CHECKSUMBLK-READ                               Reading Checksum Block - 0
+HEXMODX-INFO-CHECKSUMBLK-READ                               Reading Checksum Block - 1
+HEXMODX-INFO-INFOBLOCK-READ                                 Building Infoblock found at : 0x9200000
+HEXMODX-INFO-INFOBLOCK-TYPE                                 MDG type is MDG1
+HEXMODX-INFO-INFOBLOCK-VERSION                              Infoblock version 10 found
+HEXMODX-INFO-INFOBLOCK-READ                                 Reading Infoblock - VDS
+HEXMODX-INFO-CHECKSUMBLK-READ                               Reading Checksum Block - 0
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Calculating the infoblock checksum for ASW0
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Updating the infoblock checksum for ASW0 with value 0xD31DE595
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Checksum value before updation is 0xD31DE595
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Calculating the infoblock checksum for ASW1
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Updating the infoblock checksum for ASW1 with value 0xB829E313
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Checksum value before updation is 0xB829E313
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Calculating the infoblock checksum for ASW2
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Updating the infoblock checksum for ASW2 with value 0x1DE27FA7
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Checksum value before updation is 0x1DE27FA7
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Calculating the infoblock checksum for DS0
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Updating the infoblock checksum for DS0 with value 0xFFB55536
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Checksum value before updation is 0xFFB55536
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Calculating the infoblock checksum for VDS
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Updating the infoblock checksum for VDS with value 0x694A1F11
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Checksum value before updation is 0x694A1F11
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Calculating the checksum for ASW0_CS1 
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Updating the checksum block for ASW0_CS1 with value 0x7E00DEB5
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Checksum value before updation is 0x7E00DEB5
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Calculating the checksum for ASW0_CS2 
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Updating the checksum block for ASW0_CS2 with value 0x190A55AD
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Checksum value before updation is 0x190A55AD
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Calculating the checksum for ASW0_CS3 
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Updating the checksum block for ASW0_CS3 with value 0x7E00DEB5
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Checksum value before updation is 0x7E00DEB5
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Calculating the checksum for ASW0_CS4 
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Updating the checksum block for ASW0_CS4 with value 0x1DC46549
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Checksum value before updation is 0x1DC46549
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Calculating the checksum for ASW0_CS5 
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Updating the checksum block for ASW0_CS5 with value 0x190A55AD
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Checksum value before updation is 0x190A55AD
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Calculating the checksum for ASW0_CS6 
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Updating the checksum block for ASW0_CS6 with value 0x190A55AD
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Checksum value before updation is 0x190A55AD
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Calculating the checksum for ASW0_CS7 
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Updating the checksum block for ASW0_CS7 with value 0x190A55AD
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Checksum value before updation is 0x190A55AD
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Calculating the checksum for ASW0_CS8 
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Updating the checksum block for ASW0_CS8 with value 0x190A55AD
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Checksum value before updation is 0x190A55AD
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Calculating the checksum for ASW0_CS9 
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Updating the checksum block for ASW0_CS9 with value 0x7E00DEB5
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Checksum value before updation is 0x7E00DEB5
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Calculating the checksum for ASW0_CS10 
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Updating the checksum block for ASW0_CS10 with value 0x190A55AD
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Checksum value before updation is 0x190A55AD
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Calculating the checksum for ASW0_CS11 
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Updating the checksum block for ASW0_CS11 with value 0x190A55AD
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Checksum value before updation is 0x190A55AD
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Calculating the checksum for ASW0_CS12 
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Updating the checksum block for ASW0_CS12 with value 0x190A55AD
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Checksum value before updation is 0x190A55AD
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Calculating the checksum for ASW1_CS1 
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Updating the checksum block for ASW1_CS1 with value 0x217ADDF2
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Checksum value before updation is 0x217ADDF2
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Calculating the checksum for ASW2_CS0 
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Updating the checksum block for ASW2_CS0 with value 0x4F620C6C
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Checksum value before updation is 0x4F620C6C
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Calculating the checksum for DS0_CS1 
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Updating the checksum block for DS0_CS1 with value 0x6522DF69
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Checksum value before updation is 0x6522DF69
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Calculating the checksum for VDS_CS0 
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Updating the checksum block for VDS_CS0 with value 0x8816B943
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Checksum value before updation is 0x8816B943
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Calculating the checksum for ASW0_CS0 
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Updating the checksum block for ASW0_CS0 with value 0xB9A2AB29
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Checksum value before updation is 0xB9A2AB29
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Calculating the checksum for ASW1_CS0 
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Updating the checksum block for ASW1_CS0 with value 0x3B563D64
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Checksum value before updation is 0x3B563D64
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Calculating the checksum for DS0_CS0 
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Updating the checksum block for DS0_CS0 with value 0xEAFF4577
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Checksum value before updation is 0xEAFF4577
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Calculating the infoblock checksum for ASW0
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Updating the infoblock checksum for ASW0 with value 0xD31DE595
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Checksum value before updation is 0xD31DE595
+HEXMODX-INFO-INFOBLOCK-COMPATIBILITY                        Updating the compatibility of ASW0
+HEXMODX-INFO-INFOBLOCK-COMPATIBILITY                        Copying the compatibility of ASW0 to ASW1
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Calculating the infoblock checksum for ASW1
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Updating the infoblock checksum for ASW1 with value 0xAFFDBAC2
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Checksum value before updation is 0xB829E313
+HEXMODX-INFO-INFOBLOCK-COMPATIBILITY                        Updating the compatibility of ASW1
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Calculating the infoblock checksum for ASW1
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Updating the infoblock checksum for ASW1 with value 0xAFFDBAC2
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Checksum value before updation is 0xAFFDBAC2
+HEXMODX-INFO-INFOBLOCK-COMPATIBILITY                        Updating the compatibility of ASW1
+HEXMODX-INFO-INFOBLOCK-COMPATIBILITY                        Copying the compatibility of ASW1 to ASW2
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Calculating the infoblock checksum for ASW2
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Updating the infoblock checksum for ASW2 with value 0xC8A37D04
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Checksum value before updation is 0x1DE27FA7
+HEXMODX-INFO-INFOBLOCK-COMPATIBILITY                        Updating the compatibility of ASW2
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Calculating the infoblock checksum for ASW2
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Updating the infoblock checksum for ASW2 with value 0xC8A37D04
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Checksum value before updation is 0xC8A37D04
+HEXMODX-INFO-INFOBLOCK-COMPATIBILITY                        Updating the compatibility of ASW2
+HEXMODX-INFO-INFOBLOCK-COMPATIBILITY                        Copying the compatibility of ASW2 to DS0
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Calculating the infoblock checksum for DS0
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Updating the infoblock checksum for DS0 with value 0x7F198B59
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Checksum value before updation is 0xFFB55536
+HEXMODX-INFO-INFOBLOCK-COMPATIBILITY                        Updating the compatibility of DS0
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Calculating the infoblock checksum for DS0
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Updating the infoblock checksum for DS0 with value 0x7F198B59
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Checksum value before updation is 0x7F198B59
+HEXMODX-INFO-INFOBLOCK-COMPATIBILITY                        Updating the compatibility of DS0
+HEXMODX-INFO-INFOBLOCK-COMPATIBILITY                        Copying the compatibility of DS0 to VDS
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Calculating the infoblock checksum for VDS
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Updating the infoblock checksum for VDS with value 0xA762EC28
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Checksum value before updation is 0x694A1F11
+HEXMODX-INFO-INFOBLOCK-COMPATIBILITY                        Updating the compatibility of VDS
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Calculating the infoblock checksum for ASW1
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Updating the infoblock checksum for ASW1 with value 0xAFFDBAC2
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Checksum value before updation is 0xAFFDBAC2
+HEXMODX-INFO-INFOBLOCK-COMPATIBILITY                        Updating the compatibility of ASW1
+HEXMODX-INFO-INFOBLOCK-COMPATIBILITY                        Copying the compatibility of ASW1 to ASW2
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Calculating the infoblock checksum for ASW2
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Updating the infoblock checksum for ASW2 with value 0xC8A37D04
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Checksum value before updation is 0xC8A37D04
+HEXMODX-INFO-INFOBLOCK-COMPATIBILITY                        Updating the compatibility of ASW2
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Calculating the infoblock checksum for ASW2
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Updating the infoblock checksum for ASW2 with value 0xC8A37D04
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Checksum value before updation is 0xC8A37D04
+HEXMODX-INFO-INFOBLOCK-COMPATIBILITY                        Updating the compatibility of ASW2
+HEXMODX-INFO-INFOBLOCK-COMPATIBILITY                        Copying the compatibility of ASW2 to DS0
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Calculating the infoblock checksum for DS0
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Updating the infoblock checksum for DS0 with value 0x7F198B59
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Checksum value before updation is 0x7F198B59
+HEXMODX-INFO-INFOBLOCK-COMPATIBILITY                        Updating the compatibility of DS0
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Calculating the infoblock checksum for DS0
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Updating the infoblock checksum for DS0 with value 0x7F198B59
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Checksum value before updation is 0x7F198B59
+HEXMODX-INFO-INFOBLOCK-COMPATIBILITY                        Updating the compatibility of DS0
+HEXMODX-INFO-INFOBLOCK-COMPATIBILITY                        Copying the compatibility of DS0 to VDS
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Calculating the infoblock checksum for VDS
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Updating the infoblock checksum for VDS with value 0xA762EC28
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Checksum value before updation is 0xA762EC28
+HEXMODX-INFO-INFOBLOCK-COMPATIBILITY                        Updating the compatibility of VDS
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Calculating the infoblock checksum for ASW2
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Updating the infoblock checksum for ASW2 with value 0xC8A37D04
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Checksum value before updation is 0xC8A37D04
+HEXMODX-INFO-INFOBLOCK-COMPATIBILITY                        Updating the compatibility of ASW2
+HEXMODX-INFO-INFOBLOCK-COMPATIBILITY                        Copying the compatibility of ASW2 to DS0
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Calculating the infoblock checksum for DS0
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Updating the infoblock checksum for DS0 with value 0x7F198B59
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Checksum value before updation is 0x7F198B59
+HEXMODX-INFO-INFOBLOCK-COMPATIBILITY                        Updating the compatibility of DS0
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Calculating the infoblock checksum for DS0
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Updating the infoblock checksum for DS0 with value 0x7F198B59
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Checksum value before updation is 0x7F198B59
+HEXMODX-INFO-INFOBLOCK-COMPATIBILITY                        Updating the compatibility of DS0
+HEXMODX-INFO-INFOBLOCK-COMPATIBILITY                        Copying the compatibility of DS0 to VDS
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Calculating the infoblock checksum for VDS
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Updating the infoblock checksum for VDS with value 0xA762EC28
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Checksum value before updation is 0xA762EC28
+HEXMODX-INFO-INFOBLOCK-COMPATIBILITY                        Updating the compatibility of VDS
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Calculating the infoblock checksum for DS0
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Updating the infoblock checksum for DS0 with value 0x7F198B59
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Checksum value before updation is 0x7F198B59
+HEXMODX-INFO-INFOBLOCK-COMPATIBILITY                        Updating the compatibility of DS0
+HEXMODX-INFO-INFOBLOCK-COMPATIBILITY                        Copying the compatibility of DS0 to VDS
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Calculating the infoblock checksum for VDS
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Updating the infoblock checksum for VDS with value 0xA762EC28
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Checksum value before updation is 0xA762EC28
+HEXMODX-INFO-INFOBLOCK-COMPATIBILITY                        Updating the compatibility of VDS
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Calculating the infoblock checksum for ASW0
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Updating the infoblock checksum for ASW0 with value 0xD31DE595
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Checksum value before updation is 0xD31DE595
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Calculating the infoblock checksum for ASW1
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Updating the infoblock checksum for ASW1 with value 0xAFFDBAC2
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Checksum value before updation is 0xAFFDBAC2
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Calculating the infoblock checksum for ASW2
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Updating the infoblock checksum for ASW2 with value 0xC8A37D04
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Checksum value before updation is 0xC8A37D04
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Calculating the infoblock checksum for DS0
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Updating the infoblock checksum for DS0 with value 0x7F198B59
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Checksum value before updation is 0x7F198B59
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Calculating the infoblock checksum for VDS
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Updating the infoblock checksum for VDS with value 0xA762EC28
+HEXMODX-INFO-INFOBLOCK-UPDATE-CHECKSUM                      Checksum value before updation is 0xA762EC28
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Calculating the checksum for ASW0_CS1 
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Updating the checksum block for ASW0_CS1 with value 0x7E00DEB5
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Checksum value before updation is 0x7E00DEB5
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Calculating the checksum for ASW0_CS2 
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Updating the checksum block for ASW0_CS2 with value 0x190A55AD
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Checksum value before updation is 0x190A55AD
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Calculating the checksum for ASW0_CS3 
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Updating the checksum block for ASW0_CS3 with value 0x7E00DEB5
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Checksum value before updation is 0x7E00DEB5
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Calculating the checksum for ASW0_CS4 
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Updating the checksum block for ASW0_CS4 with value 0x1DC46549
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Checksum value before updation is 0x1DC46549
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Calculating the checksum for ASW0_CS5 
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Updating the checksum block for ASW0_CS5 with value 0x190A55AD
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Checksum value before updation is 0x190A55AD
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Calculating the checksum for ASW0_CS6 
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Updating the checksum block for ASW0_CS6 with value 0x190A55AD
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Checksum value before updation is 0x190A55AD
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Calculating the checksum for ASW0_CS7 
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Updating the checksum block for ASW0_CS7 with value 0x190A55AD
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Checksum value before updation is 0x190A55AD
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Calculating the checksum for ASW0_CS8 
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Updating the checksum block for ASW0_CS8 with value 0x190A55AD
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Checksum value before updation is 0x190A55AD
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Calculating the checksum for ASW0_CS9 
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Updating the checksum block for ASW0_CS9 with value 0x7E00DEB5
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Checksum value before updation is 0x7E00DEB5
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Calculating the checksum for ASW0_CS10 
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Updating the checksum block for ASW0_CS10 with value 0x190A55AD
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Checksum value before updation is 0x190A55AD
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Calculating the checksum for ASW0_CS11 
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Updating the checksum block for ASW0_CS11 with value 0x190A55AD
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Checksum value before updation is 0x190A55AD
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Calculating the checksum for ASW0_CS12 
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Updating the checksum block for ASW0_CS12 with value 0x190A55AD
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Checksum value before updation is 0x190A55AD
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Calculating the checksum for ASW1_CS1 
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Updating the checksum block for ASW1_CS1 with value 0x217ADDF2
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Checksum value before updation is 0x217ADDF2
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Calculating the checksum for ASW2_CS0 
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Updating the checksum block for ASW2_CS0 with value 0x8A500EAD
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Checksum value before updation is 0x4F620C6C
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Calculating the checksum for DS0_CS1 
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Updating the checksum block for DS0_CS1 with value 0x6522DF69
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Checksum value before updation is 0x6522DF69
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Calculating the checksum for VDS_CS0 
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Updating the checksum block for VDS_CS0 with value 0x7453305B
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Checksum value before updation is 0x8816B943
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Calculating the checksum for ASW0_CS0 
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Updating the checksum block for ASW0_CS0 with value 0xD29B6D76
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Checksum value before updation is 0xB9A2AB29
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Calculating the checksum for ASW1_CS0 
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Updating the checksum block for ASW1_CS0 with value 0x682D26B1
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Checksum value before updation is 0x3B563D64
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Calculating the checksum for DS0_CS0 
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Updating the checksum block for DS0_CS0 with value 0xE799B174
+HEXMODX-INFO-CHECKSUMBLK-UPDATE-CHECKSUM                    Checksum value before updation is 0xEAFF4577
+HEXMODX-INFO-WRITE                                          Writing file output.hex

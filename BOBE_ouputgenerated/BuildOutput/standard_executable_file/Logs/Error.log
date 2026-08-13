@@ -1,0 +1,34 @@
+Starting 
+*** Empty output folder C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file 
+*** Deleting *.map 
+***  
+*** Empty build log folder C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\Logs 
+***  
+*** C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\MQB37W_ASC_SAC.a exists :) 
+***  
+*** C:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\linkseglayer.ld exists :) 
+*** C:\toolbase\greenhills_rel\comp_202115_2fp_x64\ccrh850.exe exists :) 
+*** C:\toolbase\greenhills_rel\comp_202115_2fp_x64\gsrec.exe exists :) 
+*** C:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\Data\3G1300D7200T04_RG1_X_VARI04_with_backup_patched.hex exists :) 
+***  
+*** Create ELF file 
+***  
+*** C:\toolbase\greenhills_rel\comp_202115_2fp_x64\ccrh850.exe --no_debug -delete -passsource -ffunctions -recipf -cpu=rh850g3m -no_callt -ignore_callt_state_in_interrupts -large_sda -shorten_loads -shorten_moves --short_enum -nostdlib -reserve_r2 -MD --no_commons -prepare_dispose -inline_prologue -fhard -ansi -Wshadow --prototype_errors -DCOMPILERCFG_EXTENSION_MCAL_FILE -Ogeneral -sda=0 -Mnx -keepmap -map= -cpu=rh850g3m -ffunctions -lnk=-old_section_wildcard_matching -LC:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\Libraries -llibarch_NeededObjects.a -nostartfiles -entry=_rba_SysPreInit_Startup -nostdlib -individual_pragma_data_sections -individual_function_sections -individual_pragma_function_sections -individual_section_name_extra_dot -stack_protector -T C:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\linkseglayer.ld  -o C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\3G1300D7200T04_RG1_X_VARI04__MQB37W_ASC_SAC.elf C:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\Libraries\Mainpath_VARI04_Dev_Lib.a C:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\Libraries\Mainpath_VARI04_Lib.a C:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\Libraries\HWLIB_rel_FOC13_Faint_off_Lib.a C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\MQB37W_ASC_SAC.a C:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\Libraries\DSFxp.lib C:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\Libraries\RTAOS.a 
+ccrh850: Warning: Option "-map=" with empty argument ignored.
+ccrh850: Warning: Individual Data Sections is not enabled. -individual_pragma_data_sections and -individual_attribute_data_sections ignored
+[elxr] (error #412) unresolved symbols: 6
+ _SYS_Struct 	from Mainpath_VARI04_Dev_Lib.a(oembblibsymbols.o)
+ _EEP_Struct 	from Mainpath_VARI04_Lib.a(nvm_cfg.o)
+ _ASC_Init_runnable 	from Mainpath_VARI04_Dev_Lib.a(taskoem1_init.o)
+ _ASC_Controller_runnable 	from Mainpath_VARI04_Dev_Lib.a(taskoem1_1ms.o)
+ _SAC_Init_runnable 	from Mainpath_VARI04_Dev_Lib.a(taskoem2_init.o)
+ _SAC_Controller_runnable 	from Mainpath_VARI04_Dev_Lib.a(taskoem2_1ms.o)
+
+[elxr] (error) errors during processing
+***  
+*** **************************************************************** 
+*** ERROR: C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\3G1300D7200T04_RG1_X_VARI04__MQB37W_ASC_SAC.elf does not exist 
+*** **************************************************************** 
+***  
+*** ********************************* 
+*** ********************************* 

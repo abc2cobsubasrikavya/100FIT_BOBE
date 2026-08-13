@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONF xmlns="www.rbin.com/mds-1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="www.rbin.com/mds-1 file:///C:/Program%20Files/Bosch/Hexmod/schemas/baseio.xsd">
+	<HEXMOD>
+		<BASEIO>
+			<OUTPUT>
+				<FILEOUT TYPE="IHEX" NAME="medc18_output_hexmodX.hex" />
+			</OUTPUT>
+		</BASEIO>
+	</HEXMOD>
+</CONF>

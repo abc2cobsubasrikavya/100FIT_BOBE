@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONF xmlns="www.rbin.com/mds-1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="www.rbin.com/mds-1
+.\schemas\cleanup.xsd">
+    <HEXMOD>
+	<CLEANUP##IBLK_NAME_AND_TYPE##> 
+	
+##IBLK_START##
+	
+	</CLEANUP> 
+    </HEXMOD>
+</CONF>
+

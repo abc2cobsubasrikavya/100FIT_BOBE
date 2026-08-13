@@ -1,0 +1,24 @@
+
+                                                 WRITECKS COMMAND
+
+
+Sets or tests Infoblock Checksum and ChecksumBlock Checksum.
+
+Below is the syntax :
+                                           writecks 	-fc {"test"|"set"} 
+
+---------------+----------------------------------------------------------------------------------------------------
+SWITCHES       |    DESCRIPTION
+---------------+----------------------------------------------------------------------------------------------------
+   -fc         |    Takes values "set" or "test". "set" to update the checksum values and "test" to test if checksum
+               |    values are correct. Mandatory switch.
+---------------+----------------------------------------------------------------------------------------------------
+
+Example:
+	read -in medc18.hex -igCks true
+	blkLink -start 0x80020000 -next 0x80100000
+	blkLink -start 0x80100000 -next 0x80200000
+	blkLink -start 0x80200000 -next 0x0
+	writecks -fc test
+	write -out output.hex
+	

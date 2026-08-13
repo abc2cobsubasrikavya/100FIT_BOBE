@@ -1,0 +1,26 @@
+
+                                                DELETEBLOCK COMMAND
+
+
+Deletes an infoblock.
+
+Below is the syntax :
+                  deleteBlock 	-igErr {"true"|"false"}  -blkid blockId  -igRelink {"true"|"false"}
+
+---------------+----------------------------------------------------------------------------------------------------
+SWITCHES       |    DESCRIPTION
+---------------+----------------------------------------------------------------------------------------------------
+   -igerr      |    If value is "true" then even if the block is not present in the hex file, it is ignored. If it
+               |    is "false", HexmodX aborts with an error saying the block is not present in the file. Mandatory
+               |    switch.
+   -blkid      |    Block Id of the infoblock to be deleted. Mandatory switch.
+   -igrelink   |    If value is "true" then after the deletion of the infoblock, all other blocks will NOT be
+               |    relinked. If it is "false", HexmodX will relink all the remaining blocks in the same order as it
+               |    was linked earlier. Mandtory switch.
+---------------+----------------------------------------------------------------------------------------------------
+
+Example:
+	read -in medc18.hex
+	deleteblock -blkID 0x61 -igErr false -igRelink false
+	write -out output.hex -lyt 0x20
+	

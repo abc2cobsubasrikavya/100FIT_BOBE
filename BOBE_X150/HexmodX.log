@@ -1,0 +1,25 @@
+[HexmodX]        [14.2.0]       
+Copyright (c) Robert Bosch Gmbh Ltd.
+
+HEXMODX-INFO-COMMAND                                        read -in C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\3G1300D7000T02_RG1_X_VARI04__MQB37W_ASC_SAC_StartAtDrive.hex -id ID1 
+HEXMODX-INFO-COMMAND                                        read -in C:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\DataODX\Backup_SysHex.hex -id ID2 
+HEXMODX-INFO-COMMAND                                        memcopyacross -id ID1 -from 01004000 -l 0x2000 -id2 ID2 -to 80004000 -o true -fill 0xFF 
+HEXMODX-INFO-COMMAND                                        write -out C:\eps_deploy\BitBucketBuild\BOBE\BoschInputs\DataODX\Backup_SysHex.hex 
+HEXMODX-INFO-COMMAND                                        exit 
+HEXMODX-INFO-READ                                           Reading input file <3G1300D7000T02_RG1_X_VARI04__MQB37W_ASC_SAC_StartAtDrive.hex> 
+HEXMODX-INFO-READ-PARSER                                    Reading Line: 16384
+HEXMODX-INFO-READ-PARSER                                    Reading Line: 32768
+HEXMODX-INFO-READ-PARSER                                    Reading Line: 49152
+HEXMODX-INFO-READ-PARSER                                    Reading Line: 65536
+HEXMODX-INFO-READ-PARSER                                    Reading Line: 81920
+HEXMODX-INFO-READ-PARSER                                    Reading Line: 98304
+HEXMODX-INFO-READ-PARSER                                    Reading Line: 114688
+HEXMODX-INFO-READ-PARSER                                    Reading Line: 131072
+HEXMODX-INFO-READ-PARSER                                    Reading Line: 147456
+HEXMODX-INFO-READ-PARSER                                    Reading Line: 163840
+HEXMODX-INFO-READ                                           Reading input file <3G1300D7000T02_RG1_X_VARI04__MQB37W_ASC_SAC_StartAtDrive.hex> completed successfully.
+HEXMODX-INFO-READ                                           Reading input file <Backup_SysHex.hex> 
+HEXMODX-INFO-READ                                           Reading input file <Backup_SysHex.hex> completed successfully.
+HEXMODX-INFO-MEMCOPY                                        Performing the Memcopy Operation from 0x01004000 to 0x80004000
+HEXMODX-INFO-WRITE                                          Writing file Backup_SysHex.hex
+HEXMODX-INFO-EXIT[ FLOW ]                                   Exiting HexmodX using exit command

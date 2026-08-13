@@ -1,0 +1,21 @@
+
+                                                HEXCOMPARE COMMAND
+
+
+Compares two hex files and generates an xml comparison report.
+
+Below is the syntax :
+                   hexcompare 	-file1 filePath -file2 filepath -log filepath [-exit {true|false}]
+
+---------------+----------------------------------------------------------------------------------------------------
+SWITCHES       |    DESCRIPTION
+---------------+----------------------------------------------------------------------------------------------------
+   -file1      |    First input hex file for comparison.
+   -file2      |    Second input hex file for comparison.
+   -log        |    XML Comparison report path.
+   -exit       |    Exits HexmodX if EXIT is "true" and if there are any difference found. It is "false" by default.
+---------------+----------------------------------------------------------------------------------------------------
+
+Example:
+	hexcompare 	-file1 input1.hex -file2 input2.hex -log HexCompareReport.xml ^
+	exit

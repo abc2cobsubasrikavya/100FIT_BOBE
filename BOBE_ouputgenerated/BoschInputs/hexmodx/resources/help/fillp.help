@@ -1,0 +1,22 @@
+
+                                                   FILLP COMMAND
+
+
+Fills specified range with user defined byte value or default value "0x00".
+
+Below is the syntax :
+                                  fillp 	-addr address  -l len  [-fill fillValue] 
+
+---------------+----------------------------------------------------------------------------------------------------
+SWITCHES       |    DESCRIPTION
+---------------+----------------------------------------------------------------------------------------------------
+   -addr       |    Start address from where a particular pattern must be filled for specified length. Mandatory
+               |    switch.
+   -l          |    Specifies length for fill operation. Mandatory switch.
+   -fill       |    One byte value. Default value 0x00. Optional field.
+---------------+----------------------------------------------------------------------------------------------------
+
+Example:
+	read -in input1.hex
+	fillp -addr 0x80001000 -l 0x20 -fill 0xFF
+	write -out outputFile.hex -lyt 0x10	

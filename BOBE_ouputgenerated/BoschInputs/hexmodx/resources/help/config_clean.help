@@ -1,0 +1,46 @@
+
+                                                  CONFIG CLEAN COMMAND
+
+
+Config clean command implements the clean functionality.
+
+-----------------------+----------------------------------------------------------------------------------------------
+SWITCHES               |    DESCRIPTION
+-----------------------+----------------------------------------------------------------------------------------------
+   -in_t               |    Template input XML file.
+   -cleanin            |    Clean Input XML file.
+   -rule_t             |    Template rules XML file.
+   -cleanrule          |    Clean rule Input XML file.
+   -out_t              |    Template output XML file.
+   -clean_out          |    Clean Output XML file.
+   -clean_t            |    Template Clean XML file.
+   -clean              |    Clean Input XML file.
+   -hex                |    Input HEX file.
+   -cleanhex           |    Clean Input HEX file.
+   -hexmod18           |    To identify it is MDG1 project.
+   -hexmod_clean_log   |    Hexmod clean Log file.
+   -hexmod18           |    To identify it is MDG1 project.   
+-----------------------+-----------------------------------------------------------------------------------------------
+
+Example:
+
+--rule_t      _gen/swb/module/hexmod/RULES.XT
+--in_t        _gen/swb/module/hexmod/INPUT.XT
+--out_t       _gen/swb/module/hexmod/OUTPUT.XT
+--clean_t             _gen/swb/module/hexmod/CLEANUP.XT
+--core_exp    _gen/swb/module/coreproc/filelist_gen_merged_exp.txt
+--prj_adx      _gen/swb/module/asap2/MG1CS001_P1112_V181_PROTOTYPE.adx
+--all_hex     _gen/swb/module/hexmod/all_hex_files.lst
+--prj_hex     _gen/swb/module/hexmod/MG1CS001_P1112_V181_PROTOTYPE_src.hex
+--hex         _gen/swb/module/hexmod/MG1CS001_P1112_V181_PROTOTYPE_tmp.hex
+--hexmod18    
+--lyt          0x20
+--cleanin             _gen/swb/module/hexmod/clean_input.xml
+--clean               _gen/swb/module/hexmod/clean.xml
+--hexmod_log   _log/swb/module/hexmod/hexmod_merge.log
+--logfile      _log/swb/module/hexmod/config_hexmod_merge.log
+--clean_out              _gen/swb/module/hexmod/clean_output.xml
+--hexmod_clean_log	_log/swb/module/hexmod/hexmod_clean.log
+--cleanrule	_gen/swb/module/hexmod/cleanRule.xml
+--cleanhex         _gen/swb/module/hexmod/MMD104VMAC1483_N6A0_CORETASK0_cleaned_otp.hex
+

@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FLASHCONFIG VERSION="22">
+  <GENERAL-Infos PDXLatebound="false">
+    <TOOL>AUDI-VW ODX-Generator V3.18</TOOL>
+    <DATE>2021-06-22T17:24:40</DATE>
+    <ContainerType>0</ContainerType>
+    <ODX-MEMSPEC>450</ODX-MEMSPEC>
+    <ODXPath>BOBE_PLACEHOLDER_ODXPath</ODXPath>
+    <ODXExtCompTool/>
+    <ODXExtEncrTool/>
+    <VW80126Version>2.9.0</VW80126Version>
+    <ECUDiagnosticClass>DK3</ECUDiagnosticClass>
+    <LogfilInODXPath>false</LogfilInODXPath>
+    <CRCalways>true</CRCalways>
+    <DBI_equal_LBI>true</DBI_equal_LBI>
+    <ExtLogFileName>false</ExtLogFileName>
+    <ODXExtCompPara/>
+    <ODXExtCompOutFile/>
+    <ODXExtCompResult>0</ODXExtCompResult>
+    <ODXExtEncrPara/>
+    <ODXExtEncrOutFile/>
+    <ODXExtEncrResult>0</ODXExtEncrResult>
+    <ORUParticipiant>false</ORUParticipiant>
+    <FlashTimeEnable>true</FlashTimeEnable>
+    <FlashSetupTime>12</FlashSetupTime>
+    <UFSEnabled>false</UFSEnabled>
+    <UFSServerType>Embedded</UFSServerType>
+    <UFSUpdateExecution>NoExecution</UFSUpdateExecution>
+    <UFSResetType>HardReset</UFSResetType>
+    <UFSResetDuration>1000</UFSResetDuration>
+    <UFSExecutionTimeout>1000</UFSExecutionTimeout>
+    <UFSCheckTimeout>1000</UFSCheckTimeout>
+    <UFSUpdateCoordination>false</UFSUpdateCoordination>
+    <PDXAnonymousFilenames>true</PDXAnonymousFilenames>
+    <MOD_DATE>2024-12-17T14:53:36</MOD_DATE>
+  </GENERAL-Infos>
+  <OEM-Infos>
+    <Security>
+      <SA2>9341535657680B814A0787505033316B05875830303182844153565749</SA2>
+      <SecurityMethod>SA 2</SecurityMethod>
+      <FDSEnabled>true</FDSEnabled>
+      <DowngradProtectionEnabled>true</DowngradProtectionEnabled>
+      <ManualRFSBlock>true</ManualRFSBlock>
+      <IVDProgHashUsing>true</IVDProgHashUsing>
+      <IVDProgHashManual>false</IVDProgHashManual>
+      <IVDProgHashValue/>
+      <IVDTimeout>100</IVDTimeout>
+      <FDSProjID>2657</FDSProjID>
+      <SignatureCalculation>SHA256-RSA3072</SignatureCalculation>
+      <SignatureKeyFile>BOBE_PLACEHOLDER_SignatureKeyFile</SignatureKeyFile>
+      <FDSProjCfgFile>BOBE_PLACEHOLDER_FDSProjCfgFile</FDSProjCfgFile>
+      <ODXFileExt>_E</ODXFileExt>
+    </Security>
+    <ALFID>
+      <RContEraseMLenMS>0</RContEraseMLenMS>
+      <RContEraseMLenMA>2</RContEraseMLenMA>
+      <REQDownloadLenMS>4</REQDownloadLenMS>
+      <REQDownloadLenMA>2</REQDownloadLenMA>
+      <VerifyPart_UseCRC>false</VerifyPart_UseCRC>
+      <VerifyPart_LenCRC>4</VerifyPart_LenCRC>
+      <VerifyPart_LenMemAddr>2</VerifyPart_LenMemAddr>
+      <RContCheckMLenMS>0</RContCheckMLenMS>
+      <RContCheckMLenMA>1</RContCheckMLenMA>
+    </ALFID>
+    <ODXSpecific>
+      <LayerRefs>
+        <LayerRef_BV ENABLED="true">
+          <DocRef VAL="BV_SteerAssisUDS"/>
+        </LayerRef_BV>
+        <LayerRef_EV ENABLED="true">
+          <DocRef VAL="EV_SteerAssisBASG2MQB41BW"/>
+        </LayerRef_EV>
+        <LayerRef_GV ENABLED="false"/>
+      </LayerRefs>
+    </ODXSpecific>
+    <CompatibilityTests>
+      <VWSparePartNr ENABLED="false"/>
+      <VWSoftwVersNr ENABLED="false"/>
+      <VWHardwNr ENABLED="false"/>
+      <VWHardwVerNr ENABLED="false"/>
+    </CompatibilityTests>
+    <OptUserTool/>
+    <PartNumber>3QH907164H</PartNumber>
+    <SoftwareVersion>F160</SoftwareVersion>
+    <DSDText>B0181181260102</DSDText>
+    <ContainerVersion>001</ContainerVersion>
+  </OEM-Infos>
+  <MEMORY-Layout>
+    <MEMBLOCK ID="0">
+      <BlockType>DOWNGRADE_PROTECTION_VERSIONS</BlockType>
+      <BlockName>PFT</BlockName>
+      <BlockSwVersion/>
+      <BlockChecksumIndex>2</BlockChecksumIndex>
+      <BlockFileType>Motorola-SREC</BlockFileType>
+      <BlockFileName>BOBE_PLACEHOLDER_Odx_Artifacts\PFT_HEX_PATCH.hex</BlockFileName>
+      <BlockRedBendType>false</BlockRedBendType>
+      <BlockEncType>0</BlockEncType>
+      <BlockCompType>0</BlockCompType>
+      <BlockManualAddressCalc>false</BlockManualAddressCalc>
+      <BlockDowngradeProtVers/>
+      <BlockFlashDuration>1</BlockFlashDuration>
+      <BlockEncToolType>0</BlockEncToolType>
+      <BlockCompToolType>0</BlockCompToolType>
+      <BlockCRCcompressed>false</BlockCRCcompressed>
+      <BlockLBIManualInp>true</BlockLBIManualInp>
+      <BlockMemFillByte>0</BlockMemFillByte>
+      <BlockEnableSegmentation>false</BlockEnableSegmentation>
+      <BlockPaddingMethod>0</BlockPaddingMethod>
+      <BlockPaddingLength>0</BlockPaddingLength>
+      <BlockForcePadding>false</BlockForcePadding>
+      <BlockAESFile>.\</BlockAESFile>
+      <SEGMENTS>
+        <SEGMENT0 LSA="2000" DBI="2000" FSA="0" FEA="00000000" UCS="47" CRCSOF="0" CRCEOF="FFFFFFFF" CRCVAL="00000000" DGPVI="2000"/>
+      </SEGMENTS>
+    </MEMBLOCK>
+    <MEMBLOCK ID="1">
+      <BlockType>ERASE_PROGRAMMING_ROUTINE</BlockType>
+      <BlockName>EFD</BlockName>
+      <BlockSwVersion>0000</BlockSwVersion>
+      <BlockChecksumIndex>2</BlockChecksumIndex>
+      <BlockFileType>Intel-HEX</BlockFileType>
+      <BlockFileName>BOBE_PLACEHOLDER_1000FLASHDATA</BlockFileName>
+      <BlockRedBendType>false</BlockRedBendType>
+      <BlockEncType>0</BlockEncType>
+      <BlockCompType>0</BlockCompType>
+      <BlockManualAddressCalc>false</BlockManualAddressCalc>
+      <BlockDowngradeProtVers/>
+      <BlockFlashDuration>1</BlockFlashDuration>
+      <BlockEncToolType>0</BlockEncToolType>
+      <BlockCompToolType>0</BlockCompToolType>
+      <BlockCRCcompressed>false</BlockCRCcompressed>
+      <BlockLBIManualInp>true</BlockLBIManualInp>
+      <BlockMemFillByte>255</BlockMemFillByte>
+      <BlockEnableSegmentation>false</BlockEnableSegmentation>
+      <BlockPaddingMethod>0</BlockPaddingMethod>
+      <BlockPaddingLength>0</BlockPaddingLength>
+      <BlockForcePadding>false</BlockForcePadding>
+      <BlockAESFile>.\</BlockAESFile>
+      <SEGMENTS>
+        <SEGMENT0 LSA="1000" DBI="1000" FSA="00000000" FEA="00000000" UCS="1024" CRCSOF="00000000" CRCEOF="00000000" CRCVAL="0D06E9F2" DGPVI="1000"/>
+      </SEGMENTS>
+    </MEMBLOCK>
+    <MEMBLOCK ID="2">
+      <BlockType>FLASH_DATA</BlockType>
+      <BlockName>BOOT</BlockName>
+      <BlockSwVersion>B018</BlockSwVersion>
+      <BlockChecksumIndex>2</BlockChecksumIndex>
+      <BlockFileType>Intel-HEX</BlockFileType>
+      <BlockFileName>BOBE_PLACEHOLDER_BootUpdater</BlockFileName>
+      <BlockRedBendType>false</BlockRedBendType>
+      <BlockEncType>0</BlockEncType>
+      <BlockCompType>1</BlockCompType>
+      <BlockManualAddressCalc>true</BlockManualAddressCalc>
+      <BlockFlashDuration>40</BlockFlashDuration>
+      <BlockEncToolType>0</BlockEncToolType>
+      <BlockCompToolType>0</BlockCompToolType>
+      <BlockCRCcompressed>false</BlockCRCcompressed>
+      <BlockLBIManualInp>true</BlockLBIManualInp>
+      <BlockMemFillByte>255</BlockMemFillByte>
+      <BlockEnableSegmentation>false</BlockEnableSegmentation>
+      <BlockChecksumLength>4</BlockChecksumLength>
+      <BlockDowngradeProtVers>0002</BlockDowngradeProtVers>
+      <BlockPaddingMethod>0</BlockPaddingMethod>
+      <BlockPaddingLength>0</BlockPaddingLength>
+      <BlockForcePadding>false</BlockForcePadding>
+      <BlockAESFile>.\</BlockAESFile>
+      <SEGMENTS>
+        <SEGMENT0 LSA="0000" DBI="0000" FSA="00048000" FEA="001FFFFF" UCS="1802240" CRCSOF="00120000" CRCEOF="00060000" CRCVAL="00000000" DGPVI="0000"/>
+      </SEGMENTS>
+    </MEMBLOCK>
+    <MEMBLOCK ID="3">
+      <BlockType>FLASH_DATA</BlockType>
+      <BlockName>APPL_BANK_A</BlockName>
+      <BlockSwVersion>"F160"</BlockSwVersion>
+      <BlockChecksumIndex>2</BlockChecksumIndex>
+      <BlockFileType>Intel-HEX</BlockFileType>
+      <BlockFileName>BOBE_PLACEHOLDER_Odx_Artifacts\Drive_Bank_A.hex</BlockFileName>
+      <BlockRedBendType>false</BlockRedBendType>
+      <BlockEncType>0</BlockEncType>
+      <BlockCompType>1</BlockCompType>
+      <BlockManualAddressCalc>true</BlockManualAddressCalc>
+      <BlockFlashDuration>36</BlockFlashDuration>
+      <BlockEncToolType>0</BlockEncToolType>
+      <BlockCompToolType>0</BlockCompToolType>
+      <BlockCRCcompressed>false</BlockCRCcompressed>
+      <BlockLBIManualInp>true</BlockLBIManualInp>
+      <BlockMemFillByte>255</BlockMemFillByte>
+      <BlockEnableSegmentation>false</BlockEnableSegmentation>
+      <BlockChecksumLength>4</BlockChecksumLength>
+      <BlockDowngradeProtVers>0002</BlockDowngradeProtVers>
+      <BlockPaddingMethod>0</BlockPaddingMethod>
+      <BlockPaddingLength>0</BlockPaddingLength>
+      <BlockForcePadding>false</BlockForcePadding>
+      <BlockAESFile>.\</BlockAESFile>
+      <SEGMENTS>
+        <SEGMENT0 LSA="0001" DBI="0001" FSA="00048000" FEA="001FFFFF" UCS="1802240" CRCSOF="00000000" CRCEOF="00000000" CRCVAL="00000000" DGPVI="0001"/>
+      </SEGMENTS>
+    </MEMBLOCK>
+    <MEMBLOCK ID="4">
+      <BlockType>FLASH_DATA</BlockType>
+      <BlockName>APPL_BANK_B</BlockName>
+      <BlockSwVersion>"F160"</BlockSwVersion>
+      <BlockChecksumIndex>2</BlockChecksumIndex>
+      <BlockFileType>Intel-HEX</BlockFileType>
+      <BlockFileName>BOBE_PLACEHOLDER_Odx_Artifacts\Drive_Bank_B.hex</BlockFileName>
+      <BlockRedBendType>false</BlockRedBendType>
+      <BlockEncType>0</BlockEncType>
+      <BlockCompType>1</BlockCompType>
+      <BlockManualAddressCalc>true</BlockManualAddressCalc>
+      <BlockFlashDuration>29</BlockFlashDuration>
+      <BlockEncToolType>0</BlockEncToolType>
+      <BlockCompToolType>0</BlockCompToolType>
+      <BlockCRCcompressed>false</BlockCRCcompressed>
+      <BlockLBIManualInp>true</BlockLBIManualInp>
+      <BlockMemFillByte>255</BlockMemFillByte>
+      <BlockEnableSegmentation>false</BlockEnableSegmentation>
+      <BlockChecksumLength>4</BlockChecksumLength>
+      <BlockDowngradeProtVers>0002</BlockDowngradeProtVers>
+      <BlockPaddingMethod>0</BlockPaddingMethod>
+      <BlockPaddingLength>0</BlockPaddingLength>
+      <BlockForcePadding>false</BlockForcePadding>
+      <BlockAESFile>.\</BlockAESFile>
+      <SEGMENTS>
+        <SEGMENT0 LSA="0002" DBI="0002" FSA="00800000" FEA="00987FFF" UCS="1605632" CRCSOF="00000000" CRCEOF="00000000" CRCVAL="00000000" DGPVI="0002"/>
+      </SEGMENTS>
+    </MEMBLOCK>
+    <MEMBLOCK ID="5">
+      <BlockType>FLASH_DATA</BlockType>
+      <BlockName>OEM_CODE</BlockName>
+      <BlockSwVersion>"0254"</BlockSwVersion>
+      <BlockChecksumIndex>2</BlockChecksumIndex>
+      <BlockFileType>Intel-HEX</BlockFileType>
+      <BlockFileName>BOBE_PLACEHOLDER_Odx_Artifacts\Oem_Code.hex</BlockFileName>
+      <BlockRedBendType>false</BlockRedBendType>
+      <BlockEncType>0</BlockEncType>
+      <BlockCompType>1</BlockCompType>
+      <BlockManualAddressCalc>true</BlockManualAddressCalc>
+      <BlockFlashDuration>7</BlockFlashDuration>
+      <BlockEncToolType>0</BlockEncToolType>
+      <BlockCompToolType>0</BlockCompToolType>
+      <BlockCRCcompressed>false</BlockCRCcompressed>
+      <BlockLBIManualInp>true</BlockLBIManualInp>
+      <BlockMemFillByte>255</BlockMemFillByte>
+      <BlockEnableSegmentation>false</BlockEnableSegmentation>
+      <BlockChecksumLength>4</BlockChecksumLength>
+      <BlockDowngradeProtVers>0002</BlockDowngradeProtVers>
+      <BlockPaddingMethod>0</BlockPaddingMethod>
+      <BlockPaddingLength>0</BlockPaddingLength>
+      <BlockForcePadding>false</BlockForcePadding>
+      <BlockAESFile>.\</BlockAESFile>
+      <SEGMENTS>
+        <SEGMENT0 LSA="0003" DBI="0003" FSA="00988000" FEA="009CFFFF" UCS="294912" CRCSOF="00000000" CRCEOF="00000000" CRCVAL="00000000"/>
+      </SEGMENTS>
+    </MEMBLOCK>
+    <MEMBLOCK ID="6">
+      <BlockType>FLASH_DATA</BlockType>
+      <BlockName>HSM</BlockName>
+      <BlockSwVersion>"1181"</BlockSwVersion>
+      <BlockChecksumIndex>2</BlockChecksumIndex>
+      <BlockFileType>Intel-HEX</BlockFileType>
+      <BlockFileName>BOBE_PLACEHOLDER_HSM_HEX_Path</BlockFileName>
+      <BlockRedBendType>false</BlockRedBendType>
+      <BlockEncType>0</BlockEncType>
+      <BlockCompType>1</BlockCompType>
+      <BlockManualAddressCalc>true</BlockManualAddressCalc>
+      <BlockFlashDuration>4</BlockFlashDuration>
+      <BlockEncToolType>0</BlockEncToolType>
+      <BlockCompToolType>0</BlockCompToolType>
+      <BlockCRCcompressed>false</BlockCRCcompressed>
+      <BlockLBIManualInp>true</BlockLBIManualInp>
+      <BlockMemFillByte>255</BlockMemFillByte>
+      <BlockEnableSegmentation>false</BlockEnableSegmentation>
+      <BlockChecksumLength>4</BlockChecksumLength>
+      <BlockDowngradeProtVers>1002</BlockDowngradeProtVers>
+      <BlockPaddingMethod>0</BlockPaddingMethod>
+      <BlockPaddingLength>0</BlockPaddingLength>
+      <BlockForcePadding>false</BlockForcePadding>
+      <BlockAESFile>.\</BlockAESFile>
+      <SEGMENTS>
+        <SEGMENT0 LSA="0004" DBI="0004" FSA="009D8000" FEA="009FFFFF" UCS="163840" CRCSOF="00000000" CRCEOF="00000000" CRCVAL="2144DF1C" DGPVI="0004"/>
+      </SEGMENTS>
+    </MEMBLOCK>
+    <MEMBLOCK ID="7">
+      <BlockType>FLASH_DATA</BlockType>
+      <BlockName>BU_BOOT</BlockName>
+      <BlockSwVersion>B004</BlockSwVersion>
+      <BlockChecksumIndex>2</BlockChecksumIndex>
+      <BlockFileType>Intel-HEX</BlockFileType>
+      <BlockFileName>BOBE_PLACEHOLDER_BU_BootUpdater</BlockFileName>
+      <BlockRedBendType>false</BlockRedBendType>
+      <BlockEncType>0</BlockEncType>
+      <BlockCompType>1</BlockCompType>
+      <BlockManualAddressCalc>true</BlockManualAddressCalc>
+      <BlockFlashDuration>151</BlockFlashDuration>
+      <BlockEncToolType>0</BlockEncToolType>
+      <BlockCompToolType>0</BlockCompToolType>
+      <BlockCRCcompressed>false</BlockCRCcompressed>
+      <BlockLBIManualInp>true</BlockLBIManualInp>
+      <BlockMemFillByte>255</BlockMemFillByte>
+      <BlockEnableSegmentation>false</BlockEnableSegmentation>
+      <BlockChecksumLength>4</BlockChecksumLength>
+      <BlockDowngradeProtVers>0002</BlockDowngradeProtVers>
+      <BlockPaddingMethod>0</BlockPaddingMethod>
+      <BlockPaddingLength>0</BlockPaddingLength>
+      <BlockForcePadding>false</BlockForcePadding>
+      <BlockAESFile>.\</BlockAESFile>
+      <SEGMENTS>
+        <SEGMENT0 LSA="0005" DBI="0005" FSA="8000A000" FEA="800DFFFF" UCS="876544" CRCSOF="000B5FF0" CRCEOF="00000014" CRCVAL="00000000" DGPVI="0005"/>
+      </SEGMENTS>
+    </MEMBLOCK>
+    <MEMBLOCK ID="8">
+      <BlockType>FLASH_DATA</BlockType>
+      <BlockName>BU_DRIVE</BlockName>
+      <BlockSwVersion>"F160"</BlockSwVersion>
+      <BlockChecksumIndex>2</BlockChecksumIndex>
+      <BlockFileType>Intel-HEX</BlockFileType>
+      <BlockFileName>BOBE_PLACEHOLDER_Odx_Artifacts\Backup_Drive_Bank_A.hex</BlockFileName>
+      <BlockRedBendType>false</BlockRedBendType>
+      <BlockEncType>0</BlockEncType>
+      <BlockCompType>1</BlockCompType>
+      <BlockManualAddressCalc>true</BlockManualAddressCalc>
+      <BlockFlashDuration>141</BlockFlashDuration>
+      <BlockEncToolType>0</BlockEncToolType>
+      <BlockCompToolType>0</BlockCompToolType>
+      <BlockCRCcompressed>false</BlockCRCcompressed>
+      <BlockLBIManualInp>true</BlockLBIManualInp>
+      <BlockMemFillByte>255</BlockMemFillByte>
+      <BlockEnableSegmentation>false</BlockEnableSegmentation>
+      <BlockChecksumLength>4</BlockChecksumLength>
+      <BlockDowngradeProtVers>0002</BlockDowngradeProtVers>
+      <BlockPaddingMethod>0</BlockPaddingMethod>
+      <BlockPaddingLength>0</BlockPaddingLength>
+      <BlockForcePadding>false</BlockForcePadding>
+      <BlockAESFile>.\</BlockAESFile>
+      <SEGMENTS>
+        <SEGMENT0 LSA="0006" DBI="0006" FSA="8000A000" FEA="800DFFFF" UCS="876544" CRCSOF="00002000" CRCEOF="00000004" CRCVAL="00000000" DGPVI="0006"/>
+      </SEGMENTS>
+    </MEMBLOCK>
+    <MEMBLOCK ID="9">
+      <BlockType>FLASH_DATA</BlockType>
+      <BlockName>BU_SYSDSET</BlockName>
+      <BlockSwVersion>"F160"</BlockSwVersion>
+      <BlockChecksumIndex>2</BlockChecksumIndex>
+      <BlockFileType>Intel-HEX</BlockFileType>
+      <BlockFileName>BOBE_PLACEHOLDER_Odx_Artifacts\Backup_SysHex.hex</BlockFileName>
+      <BlockRedBendType>false</BlockRedBendType>
+      <BlockEncType>0</BlockEncType>
+      <BlockCompType>1</BlockCompType>
+      <BlockManualAddressCalc>true</BlockManualAddressCalc>
+      <BlockFlashDuration>3</BlockFlashDuration>
+      <BlockEncToolType>0</BlockEncToolType>
+      <BlockCompToolType>0</BlockCompToolType>
+      <BlockCRCcompressed>false</BlockCRCcompressed>
+      <BlockLBIManualInp>true</BlockLBIManualInp>
+      <BlockMemFillByte>255</BlockMemFillByte>
+      <BlockEnableSegmentation>false</BlockEnableSegmentation>
+      <BlockChecksumLength>4</BlockChecksumLength>
+      <BlockDowngradeProtVers>0002</BlockDowngradeProtVers>
+      <BlockPaddingMethod>0</BlockPaddingMethod>
+      <BlockPaddingLength>0</BlockPaddingLength>
+      <BlockForcePadding>false</BlockForcePadding>
+      <BlockAESFile>.\</BlockAESFile>
+      <SEGMENTS>
+        <SEGMENT0 LSA="0007" DBI="0007" FSA="80004000" FEA="80005FFF" UCS="8192" CRCSOF="00000000" CRCEOF="00000004" CRCVAL="00000000" DGPVI="0007"/>
+      </SEGMENTS>
+    </MEMBLOCK>
+  </MEMORY-Layout>
+  <PARTIAL-Programming PPEnabled="true">
+    <PPSparePartNr ENABLED="false">
+      <PPRef VAL=""/>
+    </PPSparePartNr>
+    <PPSoftwVersNr ENABLED="false">
+      <PPRef VAL=""/>
+    </PPSoftwVersNr>
+    <PPHardwNr ENABLED="false">
+      <PPRef VAL=""/>
+    </PPHardwNr>
+    <PPHardwVerNr ENABLED="false">
+      <PPRef VAL=""/>
+    </PPHardwVerNr>
+  </PARTIAL-Programming>
+  <ProgPreConds/>
+  <SUPPLIER-Infos>
+    <COMPANY>Robert Bosch GmbH</COMPANY>
+    <DEPARTMENT>-</DEPARTMENT>
+    <FIRSTNAME>-</FIRSTNAME>
+    <LASTNAME>-</LASTNAME>
+    <STREET>Richard-Bullinger-Strasse 77</STREET>
+    <ZIP>D-73527</ZIP>
+    <CITY>Schwaebisch Gmuend</CITY>
+    <PHONE>-</PHONE>
+    <FAX>-</FAX>
+    <EMAIL>-</EMAIL>
+  </SUPPLIER-Infos>
+</FLASHCONFIG>

@@ -1,0 +1,4 @@
+*** Calc Ram Rom usage of modules ***
+ Object  "C:\eps_deploy\BitBucketBuild\BOBE\BuildOutput\standard_executable_file\Objects\dummy.o" 
+	ROM_Size:             24
+	RAM_Size:              0

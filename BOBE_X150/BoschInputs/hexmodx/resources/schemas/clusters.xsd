@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema
+    targetNamespace="www.rbin.com/mds-1"
+    xmlns="www.rbin.com/mds-1"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified">
+
+    <xs:element name="CONF">
+        <xs:annotation>
+            <xs:documentation>CONF Tag is the root of all tags.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="HEXMOD" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="HEXMOD">
+        <xs:annotation>
+            <xs:documentation>Hexmod Tag is the basic tag for all the modules.This tag always comes after CONF tag. It
+                represents the following content is for Hexmod tool to process
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="CLUSTERS" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="CLUSTERS">
+        <xs:annotation>
+            <xs:documentation>CLUSTERS tag specifies list of clusters which needs be modified
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence
+                minOccurs="1"
+                maxOccurs="unbounded">
+                <xs:choice>
+                    <xs:element ref="CLUSTER" />
+                </xs:choice>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="CLUSTER">
+        <xs:annotation>
+            <xs:documentation>BASEIO tag specifies xml file is parsed by BASEIO module. It can have one of the two
+                elements, either INPUT or OUTPUT
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence
+                minOccurs="1"
+                maxOccurs="unbounded">
+                <xs:choice>
+                    <xs:element ref="FILEIN" />
+                    <xs:element ref="FILEOUT" />
+                </xs:choice>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="FILEIN">
+        <xs:annotation>
+            <xs:documentation>FILEIN Tag is used to read the files specified in the attribute NAME. OVERWRITE attribute
+                is specified with true or false depending
+                on whether they have to be overwritten or not. IGNORELINECKS
+                attribute has to be set to true or false
+                depending on whether ignoring is required or not. The TYPE
+                attribute can be either IHEX or S19 or BIN
+                files.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence minOccurs="1">
+                <xs:element
+                    ref="SYMBOL"
+                    minOccurs="1"
+                    maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute
+                name="TYPE"
+                type="filetype"
+                use="required" />
+            <xs:attribute
+                name="IGNORELINECKS"
+                type="xs:boolean"
+                default="false" />
+            <xs:attribute
+                name="NAME"
+                type="xs:string"
+                use="required" />
+            <xs:attribute
+                name="OVERWRITE"
+                type="xs:boolean"
+                default="false" />
+            <!-- Introduced "MODE" attribute to read MDG hex file as it can be Little Endian or Big Endian / -->
+            <xs:attribute
+                name="MODE"
+                type="mode"
+                use="required" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="SYMBOL">
+        <xs:annotation>
+            <xs:documentation>SYMBOL used to modify the
+            </xs:documentation>
+        </xs:annotation>
+
+        <xs:complexType>
+            <xs:attribute
+                name="VALUE"
+                type="eAddr"
+                use="required" />
+            <xs:attribute
+                name="ADDRESS"
+                type="eAddr"
+                use="required" />
+            <xs:attribute
+                name="OVERWRITE"
+                type="xs:string"
+                use="required" />
+            <xs:attribute
+                name="LENGTH"
+                type="length"
+                use="required" />
+        </xs:complexType>
+
+
+    </xs:element>
+
+    <xs:element name="FILEOUT">
+        <xs:annotation>
+            <xs:documentation>FILEOUT has to be used for writing files in format specified in TYPE attribute. This can
+                also support writing range output by supplying FROM and LEN. The IGNORE3OR5 specifies whether the record
+                03 and 05 have to be ignored or not.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:attribute
+                name="TYPE"
+                type="filetype"
+                use="required" />
+            <xs:attribute
+                name="NAME"
+                type="xs:string"
+                use="required" />
+            <xs:attribute
+                name="IGNORE3OR5"
+                type="xs:boolean"
+                default="false" />
+
+            <xs:attribute
+                name="LAYOUT"
+                type="exFillBinary"
+                use="optional"
+                default="0x20">
+                <xs:annotation>
+                    <xs:documentation>to add LINE LENGTH feature FileOut-Tag: e.g. lineLength[0...255] 0 -&gt; output
+                        identical to input (default) 1...255 -&gt; line length as given</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute
+                name="FILLPATTERN"
+                type="xs:string"
+                use="optional" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="filetype">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="S19" />
+            <xs:enumeration value="IHEX" />
+            <xs:enumeration value="BIN" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="exFillBinary">
+        <xs:annotation>
+            <xs:documentation>to have values from 0x0 to 0xFF</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="4" />
+            <xs:minLength value="4" />
+            <xs:pattern value="[0]x[a-fA-F0-9]*" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="eAddr">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="10" />
+            <xs:minLength value="3" />
+            <xs:pattern value="[0]x[a-fA-F0-9]*|MAXADDRESS|MINADDRESS" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="mode">
+        <xs:union>
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="BigEndian" />
+                    <xs:enumeration value="LittleEndian" />
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="[Bb][Ii][Gg][Ee][Nn][Dd][Ii][Aa][Nn]" />
+                    <xs:pattern value="[Ll][Ii][Tt][Tt][Ll][Ee][Ee][Nn][Dd][Ii][Aa][Nn]" />
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:union>
+    </xs:simpleType>
+    <xs:simpleType name="length">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="0[x|X][a-fA-F0-9]*"></xs:pattern>
+            <xs:pattern value="[a-fA-F0-9]*"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+
+</xs:schema>

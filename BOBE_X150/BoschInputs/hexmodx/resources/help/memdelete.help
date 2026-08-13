@@ -1,0 +1,21 @@
+
+                                                 MEMDELETE COMMAND
+
+
+Deletes a range of data.
+
+Below is the syntax :
+                                         memDelete 	-from address  -l len 
+
+---------------+----------------------------------------------------------------------------------------------------
+SWITCHES       |    DESCRIPTION
+---------------+----------------------------------------------------------------------------------------------------
+   -from       |    Address from which data should be deleted. Mandatory switch.
+   -l          |    Specifies length of data to be deleted. Mandatory switch.
+---------------+----------------------------------------------------------------------------------------------------
+
+Example:
+	read -in input1.hex
+	memDelete -addr 0x80801000 -l 0x10
+	write -out outputFile.hex -lyt 0x10
+	

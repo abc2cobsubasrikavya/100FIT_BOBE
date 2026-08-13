@@ -1,0 +1,53 @@
+
+                                                  CONFIG CB MERGE COMMAND
+
+
+Config CB Merge command implements the Merge functionality for CB merge.
+
+
+----------------+----------------------------------------------------------------------------------------------------
+SWITCHES        |    DESCRIPTION
+----------------+----------------------------------------------------------------------------------------------------
+   -in_t        |    Template input XML file.
+   -in          |    Input XML file.
+   -rule_t      |    Template rules XML file.
+   -rule        |    Input rules XML file.
+   -out_t       |    Template output XML file.
+   -out         |    Output XML file.
+   -info        |    Input XML file for infoblock cb.
+   -info_t      |    Template input XML file for infoblock.
+   -prj_hex     |    Input HEX file for CB .
+   -all_hex     |    lst file which contains list of all HEX input files.
+   -hex         |    Input hex file for CB.
+   -hexmod_log  |    Log file for Hexmod CB.
+   -cb_hex      |    Input HEX file for CB.
+   -cb_split_hex|    Input HEX file for split CB without config.
+   -hexmod18    |    To identify it is MDG1 project.
+   -abm_out     |    Output XML file for ABM gen.
+   -abm_t       |    Template XML file ABM.   
+----------------+----------------------------------------------------------------------------------------------------
+
+Example:
+        
+--core_exp         _gen/swb/module/coreproc/filelist_gen_merged_exp.txt
+--rule_t           _gen/swb/module/hexmod/RULES.XT
+--rule             _gen/swb/module/hexmod/rule_debug_cb.xml
+--in_t             _gen/swb/module/hexmod/INPUT.XT
+--in               _gen/swb/module/hexmod/input_debug_cb.xml
+--info_t           _gen/swb/module/hexmod/INFOBLOCK.XT
+--info             _gen/swb/module/hexmod/infoblock_debug_cb.xml
+--out_t            _gen/swb/module/hexmod/OUTPUT.XT
+--out              _gen/swb/module/hexmod/output_debug_cb.xml
+--abm_t            _gen/swb/module/hexmod/ABM.XT
+--info_check_t  _gen/swb/module/hexmod/INFOBLOCK_CHECK.XT
+--abm_out          _gen/swb/module/hexmod/abm_gen.xml
+--all_hex          _gen/swb/module/hexmod/all_hex_files.lst
+--prj_hex          _gen/swb/module/hexmod/cb_src.hex
+--hex              _bin/swb/cb_debug.hex
+--cb_hex           _bin/swb/cb.hex
+--cb_split_hex     _bin/swb/cb_withoutconfig.hex
+--hexmod18         
+--overwrite        
+--info_check    _gen/swb/module/hexmod/info_check/infoblock_check_merge.lst
+--hexmod_log        _log/swb/module/hexmod/hexmod_debug_cb.log
+--logfile           _log/swb/module/hexmod/config_hexmod_debug_cb.log

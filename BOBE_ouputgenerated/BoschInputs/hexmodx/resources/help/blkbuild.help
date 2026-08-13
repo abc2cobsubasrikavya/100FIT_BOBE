@@ -1,0 +1,20 @@
+
+                                                 BLKBUILD COMMAND
+
+
+Builds the already linked Infoblocks for processing.
+
+Below is the syntax :
+                                           blkBuild 	-start startAddress 
+
+---------------+----------------------------------------------------------------------------------------------------
+SWITCHES       |    DESCRIPTION
+---------------+----------------------------------------------------------------------------------------------------
+   -start      |    Start address of the first infoblock in the link chain. Mandatory switch.
+---------------+----------------------------------------------------------------------------------------------------
+
+Example:
+	read -in medc18.hex -igCks true
+	blkBuild -start 0x80020000 
+	write -out output.hex 
+	

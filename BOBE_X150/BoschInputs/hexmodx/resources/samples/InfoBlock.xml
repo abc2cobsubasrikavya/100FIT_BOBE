@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONF xmlns="www.rbin.com/mds-1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="www.rbin.com/mds-1 C">
+	<HEXMOD>
+		<IBMOD>
+			<IBBUILD>				
+				<BLKLINK START="0x80020000" NXTBLK="0x80100000" />
+				<BLKLINK START="0x80100000" NXTBLK="0x80200000" />
+				<BLKLINK START="0x80200000" NXTBLK="0x80300000" />
+				<BLKLINK START="0x80300000" NXTBLK="0x00" />
+			</IBBUILD>			
+
+			<VALIDATE>				
+				<CHECKSUM >
+					<WRITECKS FUNCTION="SET"/>
+				</CHECKSUM>
+			</VALIDATE>
+
+			
+		</IBMOD>
+	</HEXMOD>
+</CONF>

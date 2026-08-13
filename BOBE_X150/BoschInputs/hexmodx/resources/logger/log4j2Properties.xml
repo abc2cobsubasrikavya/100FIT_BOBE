@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="warn">
+
+  <appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="HEXMODX-%level-%-44marker   %m%n">
+            <header>
+            [HexmodX]        [14.2.0]       
+Copyright (c) Robert Bosch Gmbh Ltd.\n\n
+            </header>
+      </PatternLayout>
+    </Console>
+
+    <File name="HexmodFile" fileName="${sys:logfile.name}" append="false" >
+    	<PatternLayout pattern="HEXMODX-%level-%-44marker   %m%n">
+            <header>
+            [HexmodX]        [14.2.0]       
+Copyright (c) Robert Bosch Gmbh Ltd.\n\n
+            </header>
+        </PatternLayout>        
+    </File>                     
+  </appenders>    
+
+  <loggers>     
+    <root level="info" >
+      <appender-ref ref="Console"  level="info"/>   
+      <appender-ref ref="HexmodFile" level="info" />
+    </root>
+  </loggers>
+  
+</configuration>

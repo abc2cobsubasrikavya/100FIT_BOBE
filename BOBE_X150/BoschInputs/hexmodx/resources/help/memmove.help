@@ -1,0 +1,24 @@
+
+                                                  MEMMOVE COMMAND
+
+
+Moves a range of data from source to destination address within same hex file.
+
+Below is the syntax :
+             memMove 	-from fromAddress  -l len  -to toAddress  -o {"true"|"false"}  [-fill fillValue] 
+
+---------------+----------------------------------------------------------------------------------------------------
+SWITCHES       |    DESCRIPTION
+---------------+----------------------------------------------------------------------------------------------------
+   -from       |    Specifies address from where data has to be moved from. Mandatory switch.
+   -l          |    Length of data to be moved. Mandatory switch.
+   -to         |    Specifies address at which data is written to. Mandatory switch.
+   -o          |    Set overwrite either with true or false. Mandatory switch.
+   -fill       |    Fills gaps with the one byte pattern provided. Optional switch.
+---------------+----------------------------------------------------------------------------------------------------
+
+Example:
+	read -in input1.hex
+	memMove -from 0x80801000 -l 0x10 -to 0x80802000 -o true -fill 0xAA
+	write -out outputFile.hex -lyt 0x10
+	

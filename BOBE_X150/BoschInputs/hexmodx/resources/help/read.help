@@ -1,0 +1,21 @@
+
+                                                   READ COMMAND
+
+
+Reads hex file of type ".hex", ".s19" and ".bin".
+
+Below is the syntax :
+                               read 	-in hexfile  [-id ID]  [-igCks {"true"|"false"}]
+
+---------------+----------------------------------------------------------------------------------------------------
+SWITCHES       |    DESCRIPTION
+---------------+----------------------------------------------------------------------------------------------------
+   -in         |    "-in" takes input hex file to be read. Supports Intel(".hex"), Motorola(".s19") and
+               |    Binary(".bin"). Mandatory switch.
+   -igcks      |    Ignores wrong line checksum of input hex file when set to TRUE. By default set to FALSE.
+               |    Optional switch.
+---------------+----------------------------------------------------------------------------------------------------
+
+Example:
+	read -in input.hex -igCks true
+	exit

@@ -1,0 +1,28 @@
+
+                                                   PATCH COMMAND
+
+
+Patches data of type IHEX, ASCII or reference data at a particular address.
+
+Below is the syntax :
+                 patch 	-t {"IHEX"|"ASCII"|"REF"}  -addr address  -val value  [-l len]  [-n name] 
+
+---------------+----------------------------------------------------------------------------------------------------
+SWITCHES       |    DESCRIPTION
+---------------+----------------------------------------------------------------------------------------------------
+   -t          |    Specifies type IHEX, REF or ASCII. Mandatory switch.
+   -addr       |    Address to be patched at. Mandatory switch. 
+   -val        |    Specifies the value to be patched. If the type is REF, value at address specified in -val is
+               |    considered for patching. Mandatory switch.
+   -l          |    For type IHEX and ASCII, length switch is an optional. If the type is REF then -l is a mandatory
+               |    switch.
+   -n          |    Specifies the name of the command. Optional.
+---------------+----------------------------------------------------------------------------------------------------
+
+Example:
+	read -in medc18.hex -igCks true	
+	patch -t IHEX -addr 0x80030010 -val 0x123456
+	patch -t REF -addr 0x80040020 -val 0x80020010 -l 0x20
+	patch -t ASCII -addr 0x80030010 -val 12345678 -n "Patch Data"
+	write -out output.hex -lyt 0x10
+	

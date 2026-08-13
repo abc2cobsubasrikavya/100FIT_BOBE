@@ -1,0 +1,8 @@
+[HexmodX]        [11.0.0]       
+Copyright (c) Robert Bosch Gmbh Ltd.
+
+HEXMODX-INFO-COMMAND                                        readdata -in medc18.hex -igcks true -addr 0x80020000 -l 20 
+HEXMODX-INFO-READ                                           Reading input file <medc18.hex> 
+HEXMODX-WARN-READ                                           Ignorning wrong line checksum found at address : 0x80020030
+HEXMODX-INFO-READ                                           Reading input file <medc18.hex> completed successfully.
+HEXMODX-INFO-DATA                                           EFBEADDE00000000000000000000000000000000000000000000000000000000

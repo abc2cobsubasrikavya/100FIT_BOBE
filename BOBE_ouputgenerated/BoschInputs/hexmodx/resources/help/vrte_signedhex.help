@@ -1,0 +1,19 @@
+Signed Hex Generation
+Performs sign text file generation from input hash text file.
+
+Below is the syntax :
+          
+vrte_signedhex 	-inputtxt input_ sign_file  
+-metadata vrte_conf_file  
+[-infoblockaddr infoblock_address]  
+[-id tag_id]
+[-blockarea {HEADER | PAYLOAD}]
+[-mode {ONLINE | OFFLINE}]
+[-dummy {TRUE | FALSE}]  
+[-type signature_type]
+[-lastrun last_run]
+[-pinpath sc_pin_path]  
+[-algo signature_algorithm]
+
+Example:
+1.	vrte_signedhex -inputtxt sign.txt -metadata metadata.xml -blockarea payload -id tag1 

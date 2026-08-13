@@ -1,0 +1,16 @@
+VRTE FUNCTINALITIES COMMAND
+Metadata Patching
+Patches vrte infoblock metadata to hex file from the metadata XML file.
+
+Below is the syntax :
+          
+vrte 	-metadata metadata_xml_file_name
+
+---------------------------+---------------------------------------------------------
+   SWITCHES                |    DESCRIPTION                                 
+---------------------------+---------------------------------------------------------
+   -metadata               |    xml file which contains metadata for memory blocks in hex file.                        
+---------------------------+---------------------------------------------------------
+
+Example:
+    1)  vrte -metadata metadata.xml

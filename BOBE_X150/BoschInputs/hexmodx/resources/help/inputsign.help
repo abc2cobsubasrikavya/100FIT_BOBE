@@ -1,0 +1,42 @@
+
+                                                    MDG1TPORT INPUT SIGN COMMAND
+
+
+Generate signature for the given hex file and hash text file using MDG1TPROT
+
+Below is the syntax :
+          inputsign -inputhex [input hex file name] -inputtxt [input text file name] -outputtext [output sign text file name] -outputhex [output hex file name] -outputfiletype [output file type] -igcks [true or false] -memoryType [Memory type] -id [tag value] -filetype [input file type] -mode [bigendian or littleendian] -oidpub [OID value] -infoblockcount [infoblock count] -infoblockaddress [infoblock start address]  -tctype [trust center type] -HSMfile [hsm file name] -HSMconfig [HSM configuration] -division[division type] -pinpath [pin file path] -dummysignature	[Dummy signature value] -signaturealgo [Signature algorithm name] 
+   
+----------------------+---------------------------------------------------------------------------------
+SWITCHES              |    DESCRIPTION																	
+----------------------+---------------------------------------------------------------------------------
+   -inputhex          |    Input hex file name. 															
+   -outputhex         |    Output Hash file name.   														
+   -inputtxt          |    Input hex file name. 															
+   -outputtext        |    Output Hash file name.   														
+   -outputfiletype	  |    Output hex file type.   															
+   -igcks             |    Ignores line checksum while parsing the input hex file.							
+   -filetype          |    Input hex file type.																
+   -id                |    ID given to the hash for of each range. 											
+   -memoryType		  |    Memory type. 																	
+   -division          |    Specifies the division type.														
+   -pinpath           |    Pin file path.															    	
+   -dummysignature	  |    Dummy signature value.														 	
+   -signaturealgo	  |    Signature algorithm name.													   
+   -HSMfile   		  |    HSM file name.																	
+   -HSMconfig         |    HSM configuration type.															
+   -tctype            |    Trust center type Eg. BOSCH TRUST CENTER, VW TRUST CENTER						
+   -mode           	  |    Mode type eg. Online or Offline.												
+   -oidpub            |    OID value.																		
+   -infoblockaddress  |    Infoblock start address.														
+   -infoblockcount    |    Infoblock count for which hash value to be calculated.							
+----------------------+---------------------------------------------------------------------------------
+
+
+Example:
+	1)	inputsign -inputhex medc18.hex -filetype IHEX -outputhex outuput_sign1.hex -lyt 0x10 -outputfiletype IHEX -filemode LittleEndian -id tag1 -infoblockaddress 0x80020000 -inputtxt sign.txt 
+	
+	2)  inputsign -inputhex medc18.hex -filetype IHEX -outputhex outuput_sign1.hex -lyt 0x10 -outputfiletype IHEX -filemode LittleEndian -id tag1 -infoblockaddress 0x80020000 -inputtxt sign.txt 
+	inputsign -inputhex medc18.hex -filetype IHEX -outputhex outuput_sign2.hex -lyt 0x10 -outputfiletype IHEX -filemode LittleEndian -id tag2 -infoblockaddress 0x80020000 -inputtxt sign.txt 
+
+		

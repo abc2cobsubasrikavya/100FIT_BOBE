@@ -1,0 +1,23 @@
+MAC Calculation
+Performs mac value generation for vrte memory blocks in hex file.
+
+Below is the syntax :
+          
+vrte_mac 	-metadata metadata_xml_file  
+-keysfile keys_xml_file  
+[-mactype {SECURECALLBACK | BOOTMANAGERBLOCK}]  
+[-algo algorithm_name]
+
+---------------------------+----------------------------------------------------------------------
+   SWITCHES               |    DESCRIPTION                                 
+---------------------------+----------------------------------------------------------------------
+   -metadata               |    xml file which contains metadata for memory blocks in |    hex file.
+   -keysfile                   |    specifies the key file.
+   -mactype                 |    specify the mac type to perform sepcific mac generation
+   -algo                         |    Algorithm name to perform mac generation
+---------------------------+----------------------------------------------------------------------
+
+Example:
+    1)  vrte_mac -metadata metadata.xml  -keysfile keys.xml 
+
+    2)  vrte_mac -metadata metadata.xml  -keysfile keys.xml  -mactype SECURECALLBACK  -algo AESCMAC

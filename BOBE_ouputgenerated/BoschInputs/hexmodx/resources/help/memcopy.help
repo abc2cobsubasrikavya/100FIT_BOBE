@@ -1,0 +1,23 @@
+
+                                                  MEMCOPY COMMAND
+
+
+Copies a range of data from source to destination address within same hex file.
+
+Below is the syntax :
+             memCopy 	-from fromAddress  -l len  -to toAddress  -o {"true"|"false"}  [-fill fillValue] 
+
+---------------+----------------------------------------------------------------------------------------------------
+SWITCHES       |    DESCRIPTION
+---------------+----------------------------------------------------------------------------------------------------
+   -from       |    Specifies address from where data has to be copied from. Mandatory switch.
+   -l          |    Length of data to be copied. Mandatory switch.
+   -to         |    Specifies address at which copied data is written to. Mandatory switch.
+   -o          |    Set overwrite either with true or false. Mandatory switch.
+   -fill       |    Fills gaps with the one byte pattern provided. Optional switch.
+---------------+----------------------------------------------------------------------------------------------------
+
+Example:
+	read -in input1.hex
+	memCopy -from 0x80801000 -l 0x10 -to 0x80802000 -o true -fill 0xAA
+	write -out outputFile.hex -lyt 0x10	
